@@ -13,16 +13,19 @@ export function Contact() {
     >
       <h2 className="font-medium">Contact</h2>
       <div className="space-y-6">
-        <p className="text-gray-400">The best way to reach me is via email:</p>
-        <Link
-          href="mailto:p@paco.me"
-          className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
-        >
-          <span>p@paco.me</span>
-          <motion.span className="inline-block" whileHover={{ x: 2 }}>
-            →
-          </motion.span>
-        </Link>
+        <p className="text-gray-400">
+          The best way to reach me is via email:
+          <Link
+            href="mailto:p@paco.me"
+            className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
+          >
+            <br></br>
+            <span>p@paco.me</span>
+            <motion.span className="inline-block" whileHover={{ x: 2 }}>
+              →
+            </motion.span>
+          </Link>
+        </p>
       </div>
     </motion.section>
   );

@@ -8,6 +8,13 @@ export const metadata = {
   description: "Remiel's portfolio website built with Next.js",
 };
 
+export const viewport = {
+  themeColor: [
+    { color: "#1c1c1c", media: "(prefers-color-scheme: dark)" },
+    { color: "#ffffff", media: "(prefers-color-scheme: light)" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {

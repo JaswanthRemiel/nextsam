@@ -10,7 +10,7 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-2xl font-medium">Paco Coursey</h1>
+      <h1 className="text-2xl font-medium">Jaswanth Remiel</h1>
       <p className="text-gray-400">
         <span className="italic">Crafting interfaces.</span> Building polished
         software and web experiences. Experimenting with magical details in user

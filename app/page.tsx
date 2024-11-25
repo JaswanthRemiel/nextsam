@@ -7,8 +7,8 @@ import { Navbar } from "@/components/navBar";
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-24 w-full">
+    <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
+      <main className="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-12 w-full">
         <Navbar />
         <Header />
         <Sections />

@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ::selection styling */
 ::selection {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff; /* Dark gray */
+  color: #1c1c1c; /* White */
 }
 
-html {
+/* Default background and text colors for the body */
+html, body {
+  background-color: #ffffff; /* Dark gray */
+  color: #ffffff; /* White */
+  font-family: 'Inter', sans-serif; /* Use the Inter font */
   min-width: 360px;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
+/* Responsive scrolling for overflow content */
 @media (max-width: 768px) {
   .overflow-x-auto {
     -webkit-overflow-scrolling: touch;
@@ -24,4 +31,25 @@ html {
   .overflow-x-auto::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Custom link styles */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Typography and spacing refinements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
