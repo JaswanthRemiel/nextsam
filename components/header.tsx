@@ -10,7 +10,7 @@ const words = [
   "fullstack developer.",
   "content creator.",
   "graphic designer.",
-  "gamer",
+  "gamer.",
 ];
 
 export function Header() {
@@ -22,8 +22,10 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="text-3xl mx-auto font-normal">
-        Remiel,
-        <FlipWords words={words} /> <br />
+        <span>
+          Remiel,
+          <FlipWords words={words} /> <br />
+        </span>
       </div>
 
       <p className="text-gray-400">
