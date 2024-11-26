@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
 
-// Import the Newsreader font with specific weights if needed
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
 
 export function Now() {
@@ -16,19 +15,24 @@ export function Now() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Now</h2>
-      {/* Apply the Newsreader font class to this div */}
-      <div className={`${newsreader.className} space-y-6 text-gray-400`}>
+      <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
           hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D
           India, crafting AI-driven content moderation tools and learning
           something new every day. When not working on cutting-edge projects,
           I&apos;m busy building my personal brand and sharing my journey on{" "}
-          <Link href={links.youtube} className="space-y-6 text-gray-200">
+          <Link
+            href={links.youtube}
+            className="space-y-6 text-gray-200 underline"
+          >
             Youtube
           </Link>{" "}
           and{" "}
-          <Link href={links.twitter} className="space-y-6 text-gray-200">
+          <Link
+            href={links.twitter}
+            className="space-y-6 text-gray-100 underline"
+          >
             Twitter
           </Link>
           , if you&apos;re curious.

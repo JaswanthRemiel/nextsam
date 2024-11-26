@@ -24,19 +24,19 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-1xl mx-auto font-bold">
+      <h1>
         <span>
           Remiel,
           <FlipWords words={words} /> <br />
         </span>
-      </div>
+      </h1>
 
-      <p className={`${newsreader.className} text-gray-400`}>
+      <p className={`${newsreader.className} text-gray-100`}>
         I'm passionate about designing digital experiences that make people say
         "wow" and building web applications more stable than a server after a
         reboot.
       </p>
-      <p className={`${newsreader.className} text-gray-400`}>
+      <p className={`${newsreader.className} text-gray-100`}>
         When I’m not geeking out over code, you’ll find me gaming, crafting
         content for{" "}
         <span className="font-light text-gray-300">
