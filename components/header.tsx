@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
 import * as links from "./details";
 import { FlipWords } from "./ui/flip-words";
 import { Newsreader } from "next/font/google";
@@ -28,7 +28,7 @@ export function Header() {
       {/* Logo */}
       <div className="flex items-start">
         <Image
-          src="/logo.png"
+          src="https://raw.githubusercontent.com/JaswanthRemiel/nextsam/refs/heads/main/public/logo.png"
           alt="Jaswanth Remiel Logo"
           width={40}
           height={40}
