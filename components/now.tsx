@@ -27,7 +27,7 @@ export function Now() {
           <Link
             href={links.youtube}
             target="_blank"
-            className="space-y-6 text-gray-200 underline"
+            className="space-y-6 text-gray-100 underline decoration-gray-100"
           >
             Youtube
           </Link>{" "}
@@ -35,7 +35,7 @@ export function Now() {
           <Link
             href={links.twitter}
             target="_blank"
-            className="space-y-6 text-gray-100 underline"
+            className="space-y-6 text-gray-100 underline decoration-gray-100"
           >
             Twitter
           </Link>

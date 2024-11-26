@@ -26,7 +26,20 @@ export function Sections() {
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
                 >
-                  ↗
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-3 h-3 ml-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 19L19 5M5 5h14v14"
+                    />
+                  </svg>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
@@ -43,7 +56,20 @@ export function Sections() {
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
                 >
-                  ↗
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-3 h-3 ml-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 19L19 5M5 5h14v14"
+                    />
+                  </svg>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
@@ -61,7 +87,20 @@ export function Sections() {
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
                 >
-                  ↗
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-3 h-3 ml-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 19L19 5M5 5h14v14"
+                    />
+                  </svg>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">

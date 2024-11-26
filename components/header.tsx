@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
+import Image from "next/image"; // Import Image component
 import * as links from "./details";
 import { FlipWords } from "./ui/flip-words";
 import { Newsreader } from "next/font/google";
@@ -24,24 +25,42 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      {/* Logo */}
+      <div className="flex items-start">
+        <Image
+          src="/logo.png"
+          alt="Jaswanth Remiel Logo"
+          width={40}
+          height={40}
+          className="mr-4"
+        />
+      </div>
+      <br></br>
+
+      {/* Description */}
       <h1>
         <span>
-          Remiel,
-          <FlipWords words={words} /> <br />
+          Jaswanth Remiel
+          {/* <FlipWords words={words} /> <br /> */}
         </span>
       </h1>
-
       <p className={`${newsreader.className} text-gray-100`}>
-        I'm passionate about designing digital experiences that make people say
-        "wow" and building web applications more stable than a server after a
-        reboot.
+        where art meets code, I create digital experiences that captivate and
+        empower, merging aesthetic brilliance with cutting-edge technology.
+        Every pixel and line of code is a deliberate stroke, shaping intuitive
+        solutions that resonate with users.
       </p>
       <p className={`${newsreader.className} text-gray-100`}>
-        When I’m not geeking out over code, you’ll find me gaming, crafting
-        content for{" "}
-        <span className="font-light text-gray-300">
-          <Link href={links.youtube}>remielgraphy.</Link>
-        </span>
+        as a Microsoft Learn Student Ambassador, I share my passion for
+        technology and innovation through engaging content, inspiring a global
+        community of creators on my channel,{" "}
+        <Link
+          href={links.youtube}
+          className="underline text-gray-100 decoration-gray-100"
+        >
+          remielgraphy
+        </Link>
+        .
       </p>
     </motion.header>
   );
