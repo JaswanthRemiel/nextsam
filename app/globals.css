@@ -28,5 +28,14 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Prevent vertical scroll on small screens */
+    @apply overflow-x-hidden overflow-y-scroll;
+  }
+
+  /* Hide scroll on mobile */
+  @media (max-width: 768px) {
+    body {
+      @apply overflow-hidden;
+    }
   }
 }
