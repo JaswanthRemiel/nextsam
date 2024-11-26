@@ -3,8 +3,10 @@ import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export function Now() {
   return (
@@ -24,6 +26,7 @@ export function Now() {
           I&apos;m busy building my personal brand and sharing my journey on{" "}
           <Link
             href={links.youtube}
+            target="_blank"
             className="space-y-6 text-gray-200 underline"
           >
             Youtube
@@ -31,6 +34,7 @@ export function Now() {
           and{" "}
           <Link
             href={links.twitter}
+            target="_blank"
             className="space-y-6 text-gray-100 underline"
           >
             Twitter

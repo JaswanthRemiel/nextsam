@@ -8,13 +8,11 @@ import { Navbar } from "@/components/navBar";
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-      <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-32 space-y-12 w-full">
-        {/* <Navbar /> */}
+      <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-28 space-y-12 w-full">
         <Header />
         <Sections />
         <Now />
         <Contact />
-        {/* <Footer /> */}
       </main>
     </div>
   );

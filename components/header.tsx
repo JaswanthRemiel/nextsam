@@ -7,7 +7,7 @@ import * as links from "./details";
 import { FlipWords } from "./ui/flip-words";
 import { Newsreader } from "next/font/google";
 
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 const words = [
   "fullstack developer.",
