@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Newsreader } from "next/font/google";
 
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
 export function Sections() {
   return (
     <motion.section

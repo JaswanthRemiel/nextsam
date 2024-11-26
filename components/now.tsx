@@ -2,6 +2,10 @@
 import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Newsreader } from "next/font/google";
+
+// Import the Newsreader font with specific weights if needed
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
 
 export function Now() {
   return (
@@ -12,7 +16,8 @@ export function Now() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Now</h2>
-      <div className="font-serif space-y-6 text-gray-400">
+      {/* Apply the Newsreader font class to this div */}
+      <div className={`${newsreader.className} space-y-6 text-gray-400`}>
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
           hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D

@@ -5,6 +5,9 @@ import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
 import * as links from "./details";
 import { FlipWords } from "./ui/flip-words";
+import { Newsreader } from "next/font/google";
+
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["400"] });
 
 const words = [
   "fullstack developer.",
@@ -28,12 +31,12 @@ export function Header() {
         </span>
       </div>
 
-      <p className="text-gray-400 font-serif">
+      <p className={`${newsreader.className} text-gray-400`}>
         I'm passionate about designing digital experiences that make people say
         "wow" and building web applications more stable than a server after a
         reboot.
       </p>
-      <p className="text-gray-400 font-serif">
+      <p className={`${newsreader.className} text-gray-400`}>
         When I’m not geeking out over code, you’ll find me gaming, crafting
         content for{" "}
         <span className="font-light text-gray-300">
