@@ -11,7 +11,6 @@ export function Sections() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <h2 className="font-medium">so far, my journey</h2>
       <div className="flex md:grid md:grid-cols-3 gap-16 w-[300%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-medium text-gray-400">Projects</h2>
@@ -21,7 +20,7 @@ export function Sections() {
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>⌘K →</span>
+                <span>⌘K</span>
                 <motion.span className="inline-block" whileHover={{ x: 2 }}>
                   →
                 </motion.span>
@@ -68,10 +67,7 @@ export function Sections() {
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>React Hook Getter Pattern</span>
-                <motion.span className="inline-block" whileHover={{ x: 2 }}>
-                  →
-                </motion.span>
+                <span className="underline">React Hook Getter Pattern</span>
               </Link>
               <p className="text-sm text-gray-400 mt-1">
                 Simple, efficient React state hook in 50 lines.
@@ -82,10 +78,7 @@ export function Sections() {
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>Redesign 2021</span>
-                <motion.span className="inline-block" whileHover={{ x: 2 }}>
-                  →
-                </motion.span>
+                <span className="underline">Redesign 2021</span>
               </Link>
               <p className="text-sm text-gray-400 mt-1">
                 Return to simplicity.
@@ -96,10 +89,7 @@ export function Sections() {
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>All writing</span>
-                <motion.span className="inline-block" whileHover={{ x: 2 }}>
-                  →
-                </motion.span>
+                <span className="underline">All writing</span>
               </Link>
               <p className="text-sm text-gray-400 mt-1">
                 Infrequent thoughts on design and code.
@@ -115,10 +105,7 @@ export function Sections() {
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>Craft</span>
-                <motion.span className="inline-block" whileHover={{ x: 2 }}>
-                  →
-                </motion.span>
+                <span className="underline">Craft</span>
               </Link>
               <p className="text-sm text-gray-400 mt-1">
                 Implementing interfaces and interactions.

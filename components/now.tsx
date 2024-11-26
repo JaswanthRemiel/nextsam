@@ -12,7 +12,7 @@ export function Now() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Now</h2>
-      <div className="space-y-6 text-gray-400">
+      <div className="font-serif space-y-6 text-gray-400">
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
           hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D
@@ -26,7 +26,7 @@ export function Now() {
           <Link href={links.twitter} className="space-y-6 text-gray-200">
             Twitter
           </Link>
-          , if you&apos;re curious).
+          , if you&apos;re curious.
         </p>
         <p>
           Between debugging code and brainstorming the next viral tweet or

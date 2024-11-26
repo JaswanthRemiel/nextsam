@@ -29,18 +29,4 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  figure {
-    border-radius: var(--radius);
-    background-color: var(--card);
-    color: var(--card-foreground);
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px var(--shadow-dark);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  }
-
-  figure:hover {
-    box-shadow: 0 6px 8px var(--shadow-light), 0 4px 6px var(--shadow-dark);
-    background-color: hsl(240, 10%, 14%);
-  }
 }

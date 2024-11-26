@@ -21,24 +21,22 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-3xl mx-auto font-normal">
+      <div className="text-1xl mx-auto font-bold">
         <span>
           Remiel,
           <FlipWords words={words} /> <br />
         </span>
       </div>
 
-      <p className="text-gray-400">
-        tech enthusiast, gamer, and content creator who loves building sleek,
-        user-friendly interfaces and exploring the magic of technology. As a
-        Microsoft Learn Student Ambassador (Beta), I’m actively contributing to
-        the tech community while experimenting with AI, web development, and
-        innovative solutions that push boundaries.
+      <p className="text-gray-400 font-serif">
+        I'm passionate about designing digital experiences that make people say
+        "wow" and building web applications more stable than a server after a
+        reboot.
       </p>
-      <p className="text-gray-400">
+      <p className="text-gray-400 font-serif">
         When I’m not geeking out over code, you’ll find me gaming, crafting
         content for{" "}
-        <span className="font-light">
+        <span className="font-light text-gray-300">
           <Link href={links.youtube}>remielgraphy.</Link>
         </span>
       </p>
