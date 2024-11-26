@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HyperText from "@/components/ui/hyper-text";
+import Link from "next/link";
+import * as links from "./details";
 
 export function Header() {
   return (
@@ -10,15 +13,20 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-2xl font-medium">Jaswanth Remiel</h1>
+      <h1 className="text-2xl font-medium">Remiel</h1>
       <p className="text-gray-400">
-        <span className="italic">Crafting interfaces.</span> Building polished
-        software and web experiences. Experimenting with magical details in user
-        interfaces. Webmaster at Linear.
+        tech enthusiast, gamer, and content creator who loves building sleek,
+        user-friendly interfaces and exploring the magic of technology. As a
+        Microsoft Learn Student Ambassador (Beta), I’m actively contributing to
+        the tech community while experimenting with AI, web development, and
+        innovative solutions that push boundaries.
       </p>
       <p className="text-gray-400">
-        In the past I&apos;ve developed the Vercel design system, website, and
-        dashboard.
+        When I’m not geeking out over code, you’ll find me gaming, crafting
+        content for{" "}
+        <span className="font-light">
+          <Link href={links.youtube}>remielgraphy.</Link>
+        </span>
       </p>
     </motion.header>
   );

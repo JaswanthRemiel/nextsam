@@ -1,6 +1,7 @@
 "use client";
-
+import * as links from "./details";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function Now() {
   return (
@@ -13,20 +14,26 @@ export function Now() {
       <h2 className="font-medium">Now</h2>
       <div className="space-y-6 text-gray-400">
         <p>
-          Developing skill through doing, guiltlessly exploring passion and
-          interests, imbuing quality. Mindful that{" "}
-          <em>everything around me is someone&apos;s life work</em>.
+          Currently juggling multiple hats (figuratively—I don&apos;t own many
+          hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D
+          India, crafting AI-driven content moderation tools and learning
+          something new every day. When not working on cutting-edge projects,
+          I&apos;m busy building my personal brand and sharing my journey on{" "}
+          <Link href={links.youtube} className="space-y-6 text-gray-200">
+            Youtube
+          </Link>{" "}
+          and{" "}
+          <Link href={links.twitter} className="space-y-6 text-gray-200">
+            Twitter
+          </Link>
+          , if you&apos;re curious).
         </p>
         <p>
-          All I want to do is build websites. Typography, motion design,
-          copywriting, performance— the web is an endless medium of opportunity
-          and creativity of which I&apos;ve only scratched the surface.
-        </p>
-        <p>
-          Enjoying deep, dark, boring dance music: songs that set the pace in
-          the first ten seconds and maintain it for the next ten minutes. Deep
-          is a curation of my favorites. Soothed by the predictability of it
-          all.
+          Between debugging code and brainstorming the next viral tweet or
+          video, I like to keep things fun. Exploring content creation and
+          storytelling has become a creative outlet, letting me connect with an
+          amazing community while showcasing my passion for design, tech, and
+          sometimes the occasional gaming session.
         </p>
       </div>
     </motion.section>
