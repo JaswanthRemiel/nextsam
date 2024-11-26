@@ -28,14 +28,26 @@
 
   body {
     @apply bg-background text-foreground;
-    /* Prevent vertical scroll on small screens */
-    @apply overflow-x-hidden overflow-y-scroll;
+    /* Prevent horizontal scrolling */
+    @apply overflow-x-hidden;
   }
 
-  /* Hide scroll on mobile */
+  /* Hide vertical scrollbar but keep scrolling on mobile */
   @media (max-width: 768px) {
+    html,
     body {
-      @apply overflow-hidden;
+      height: 100%; /* Ensure full height for scrolling */
+      overflow-y: scroll; /* Enable scrolling */
+    }
+
+    /* Hide the scrollbar but still allow scrolling */
+    body::-webkit-scrollbar {
+      display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
+    }
+
+    /* For Firefox, hide the scrollbar but keep the ability to scroll */
+    body {
+      scrollbar-width: none; /* Hide scrollbar in Firefox */
     }
   }
 }
