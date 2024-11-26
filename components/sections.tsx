@@ -6,13 +6,13 @@ import Link from "next/link";
 export function Sections() {
   return (
     <motion.section
-      className="horizontal-scroll-only pb-6 md:pb-0"
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <h2 className="font-medium mb-4">So far, my journey</h2>
-      <div className="flex gap-16 w-[300%] md:grid md:grid-cols-3 md:w-full">
+      <h2 className="font-medium">so far, my journey</h2>
+      <div className="flex md:grid md:grid-cols-3 gap-16 w-[300%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-medium text-gray-400">Projects</h2>
           <div className="space-y-6">
