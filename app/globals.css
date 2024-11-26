@@ -2,63 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::selection styling */
-::selection {
-  background-color: #ffffff;
-  color: #1c1c1c;
-}
-
-html,
-body {
-  background-color: #ffffff;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  min-width: 360px;
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-  .overflow-x-auto {
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-  }
-
-  .overflow-x-auto > div {
-    scroll-snap-align: start;
-  }
-
-  .overflow-x-auto::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-/* Custom link styles */
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffffffc2;
-  text-decoration: underline;
-}
-
-/* Typography and spacing refinements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -80,13 +23,14 @@ p {
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
