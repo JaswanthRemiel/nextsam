@@ -4,6 +4,7 @@ import { Now } from "../components/now";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 import { Navbar } from "@/components/navBar";
+import { MarqueeDemo } from "@/components/marquee";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
         <Header />
         <Sections />
         <Now />
+        <MarqueeDemo />
         <Contact />
       </main>
       <Footer />
