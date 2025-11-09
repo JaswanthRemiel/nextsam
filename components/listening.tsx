@@ -13,15 +13,15 @@ export default function ListeningSection() {
 
   const songs: Song[] = [
     {
-      title: "Perfect - Ed Sheeran",
+      title: "perfect - ed sheeran",
       url: "https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v",
     },
     {
-      title: "Golden hour - JVKE",
+      title: "golden hour - jvke ",
       url: "https://open.spotify.com/track/4yNk9iz9WVJikRFle3XEvn",
     },
     {
-      title: "Monica - Anirudh Ravichander",
+      title: "monica - anirudh ravichander",
       url: "https://open.spotify.com/track/2t1pEpxPz91KldW7C0FyZv",
     },
   ];
