@@ -1,32 +1,96 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
+import { Newsreader } from "next/font/google";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-export function Contact() {
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+
+const MotionSection = motion.section as unknown as React.ComponentType<any>;
+
+export default function ContactSection() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visitorTime, setVisitorTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setVisitorTime(new Date());
+    setIsLoaded(true);
+  }, []);
+
+  const formatTime = (date: Date | null) => {
+    if (!date) return "";
+    try {
+      return date.toLocaleString(undefined, {
+        dateStyle: "medium",
+        timeStyle: "short",
+      });
+    } catch (e) {
+      return date.toString();
+    }
+  };
+
+  const weekdayName = (date: Date | null) => {
+    if (!date) return null;
+    try {
+      return date
+        .toLocaleDateString(undefined, { weekday: "long" })
+        .toLowerCase();
+    } catch (e) {
+      return null;
+    }
+  };
+
   return (
-    <motion.section
+    <MotionSection
       className="space-y-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Contact</h2>
-      <div className="space-y-6">
-        <p className="text-gray-400">
-          The best way to reach me is via email:
-          <Link
-            href="mailto:remiel.fyi?subject=Hi there!"
-            className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
-          >
-            <br></br>
-            <span className="underline">remiel@remiel.fyi</span>
-            <motion.span className="inline-block" whileHover={{ x: 2 }}>
-              →
-            </motion.span>
-          </Link>
-        </p>
+      <div
+        className={`${newsreader.className} text-gray-100 flex text-l flex-wrap gap-2 sm:gap-6 mb-2`}
+      >
+        <a
+          href="https://twitter.com/jaswanthremiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
+          twitter / x
+        </a>
+        <a
+          href="https://github.com/JaswanthRemiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
+          github
+        </a>
+        <a
+          href="https://linkedin.com/in/jaswanthremiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
+          linkedin
+        </a>
+        <a
+          href="mailto:work.remiel@remiel.work"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
+          say hello
+        </a>
       </div>
-    </motion.section>
+      <a
+        className={`text-l text-muted-foreground ${newsreader.className} text-gray-100 gap-y-2`}
+      >
+        {visitorTime ? (
+          <>have a nice {weekdayName(visitorTime)} ahead.</>
+        ) : (
+          "have a nice day ahead."
+        )}
+      </a>
+    </MotionSection>
   );
 }

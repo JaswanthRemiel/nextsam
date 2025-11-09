@@ -51,3 +51,26 @@
     }
   }
 }
+
+/* Show a thin, rounded horizontal scrollbar (light/gray) for elements that opt in.
+   This overrides the global "hide scrollbar" rule for small screens when the
+   element has the .show-horizontal-scroll class. */
+@media (max-width: 768px) {
+  .show-horizontal-scroll {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #f7fafc transparent; /* gray-100 thumb, transparent track */
+  }
+
+  /* Webkit (Chrome, Safari, Edge) */
+  .show-horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  .show-horizontal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .show-horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #f7fafc; /* tailwind gray-100 */
+    border-radius: 9999px;
+  }
+}
