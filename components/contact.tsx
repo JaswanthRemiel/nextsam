@@ -42,12 +42,17 @@ export default function ContactSection() {
 
   return (
     <MotionSection
-      className="space-y-8"
+      className="space-y-4"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Contact</h2>
+      {/* <div className=" text-gray-100 flex space-x-4">
+        <button className="btn btn-xs px-3 py-1 text-xs">
+          <a href="#">resume</a>
+        </button>
+      </div> */}
       <div
         className={`${newsreader.className} text-gray-100 flex text-l flex-wrap gap-2 sm:gap-6 mb-2`}
       >
