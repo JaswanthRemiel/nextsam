@@ -8,9 +8,11 @@ import { Roboto } from "next/font/google";
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
+const MotionSection = motion.section as unknown as any;
+
 export function Now() {
   return (
-    <motion.section
+    <MotionSection
       className="space-y-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -49,6 +51,6 @@ export function Now() {
           sometimes the occasional gaming session.
         </p>
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

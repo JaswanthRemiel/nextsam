@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ProjectItem } from "./projectitem";
 
-export function Sections() {
+const MotionSection: any = motion.section;
+
+export default function Sections() {
   return (
-    <motion.section
-      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
+    <MotionSection
+      className="show-horizontal-scroll overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
@@ -22,54 +24,53 @@ export function Sections() {
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
                 <span>Batmode extension</span>
-                <motion.span
-                  className="inline-block opacity-50"
-                  whileHover={{ x: 2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-3 h-3 ml-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 19L19 5M5 5h14v14"
-                    />
-                  </svg>
+                <motion.span whileHover={{ x: 2 }}>
+                  <span className="inline-block opacity-50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-3 h-3 ml-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 19L19 5M5 5h14v14"
+                      />
+                    </svg>
+                  </span>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
                 dark mode across any website.
               </p>
             </div>
+
             <div>
               <Link
                 href="https://remiel.fyi/ai-summarizer/"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
                 <span>AI Text Summarizer</span>
-                <motion.span
-                  className="inline-block opacity-50"
-                  whileHover={{ x: 2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-3 h-3 ml-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 19L19 5M5 5h14v14"
-                    />
-                  </svg>
+                <motion.span whileHover={{ x: 2 }}>
+                  <span className="inline-block opacity-50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-3 h-3 ml-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 19L19 5M5 5h14v14"
+                      />
+                    </svg>
+                  </span>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
@@ -77,30 +78,30 @@ export function Sections() {
                 Facebook BART model.
               </p>
             </div>
+
             <div>
               <Link
                 href="#"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
                 <span>CryptoCat NFT</span>
-                <motion.span
-                  className="inline-block opacity-50"
-                  whileHover={{ x: 2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-3 h-3 ml-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 19L19 5M5 5h14v14"
-                    />
-                  </svg>
+                <motion.span whileHover={{ x: 2 }}>
+                  <span className="inline-block opacity-50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-3 h-3 ml-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 19L19 5M5 5h14v14"
+                      />
+                    </svg>
+                  </span>
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
@@ -110,6 +111,7 @@ export function Sections() {
             </div>
           </div>
         </div>
+
         <div className="w-full space-y-8">
           <h2 className="font-medium text-gray-100">Writing</h2>
           <div className="space-y-6">
@@ -130,6 +132,7 @@ export function Sections() {
             />
           </div>
         </div>
+
         <div className="w-full space-y-8">
           <h2 className="font-medium text-gray-100">Building</h2>
           <div className="space-y-6">
@@ -141,6 +144,6 @@ export function Sections() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

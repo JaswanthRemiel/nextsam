@@ -1,7 +1,10 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
+const MotionSection: any = motion.section;
 
 const navItems = {
   "/": {
@@ -10,14 +13,11 @@ const navItems = {
   "/blog": {
     name: "blog",
   },
-  "/store": {
-    name: "store",
-  },
 };
 
 export function Navbar() {
   return (
-    <motion.section
+    <MotionSection
       className="space-y-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -45,6 +45,6 @@ export function Navbar() {
           </nav>
         </div>
       </aside>
-    </motion.section>
+    </MotionSection>
   );
 }
