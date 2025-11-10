@@ -5,15 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import * as links from "./details";
 import { Newsreader } from "next/font/google";
+import ListeningSection from "./listening";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
-
-const words = [
-  "fullstack developer.",
-  "content creator.",
-  "graphic designer.",
-  "gamer.",
-];
 
 export function Header() {
   return (
@@ -55,6 +49,10 @@ export function Header() {
           .
         </p>
       </header>
+      <p className={`${newsreader.className} text-gray-100 mt-4`}>
+        now listening to
+      </p>
+      <ListeningSection />
     </motion.div>
   );
 }

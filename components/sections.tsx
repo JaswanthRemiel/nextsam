@@ -4,16 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ProjectItem } from "./projectitem";
 
-const MotionSection: any = motion.section;
-
-export default function Sections() {
+export function Sections() {
   return (
-    <MotionSection
-      className="show-horizontal-scroll overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
+    <section className="show-horizontal-scroll overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible">
       <div className="flex md:grid md:grid-cols-3 gap-16 w-[300%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-medium text-gray-100">Projects</h2>
@@ -74,8 +67,8 @@ export default function Sections() {
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
-                generates meaningful summaries powered by Hugging Face's
-                Facebook BART model.
+                generates meaningful summaries powered by Hugging Face Facebook
+                BART model.
               </p>
             </div>
 
@@ -144,6 +137,8 @@ export default function Sections() {
           </div>
         </div>
       </div>
-    </MotionSection>
+    </section>
   );
 }
+
+export default Sections;

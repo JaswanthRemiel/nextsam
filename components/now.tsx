@@ -3,12 +3,14 @@ import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
-import { Roboto } from "next/font/google";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
-const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
-const MotionSection = motion.section as unknown as any;
+type MotionSectionProps = import("framer-motion").HTMLMotionProps<"section"> &
+  React.HTMLAttributes<HTMLElement>;
+
+const MotionSection =
+  motion.section as unknown as React.ComponentType<MotionSectionProps>;
 
 export function Now() {
   return (
