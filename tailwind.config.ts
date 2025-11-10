@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -91,10 +93,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("daisyui")],
-  // DaisyUI configuration (optional): keeps light/dark themes available
-  daisyui: {
-    themes: ["light", "dark"],
-    darkTheme: "dark",
-  },
 };
+
+export default config;

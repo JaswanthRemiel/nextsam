@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface Song {
   title: string;
+  artist: string;
   url: string;
+  albumCover: string;
 }
 
 export default function ListeningSection() {
@@ -13,59 +16,78 @@ export default function ListeningSection() {
 
   const songs: Song[] = [
     {
-      title: "perfect - ed sheeran",
+      title: "Perfect",
+      artist: "Ed Sheeran",
       url: "https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v",
+      albumCover:
+        "https://cdn-images.dzcdn.net/images/cover/007b5e41dae0dd99ade00f509db734d4/1900x1900-000000-80-0-0.jpg?w=300&h=300&fit=crop",
     },
     {
-      title: "golden hour - jvke ",
+      title: "Golden Hour",
+      artist: "JVKE",
       url: "https://open.spotify.com/track/4yNk9iz9WVJikRFle3XEvn",
+      albumCover:
+        "https://cdn-images.dzcdn.net/images/cover/845eff477946539849c7291510d61daf/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
     },
     {
-      title: "monica - anirudh ravichander",
+      title: "Monica",
+      artist: "Anirudh Ravichander",
       url: "https://open.spotify.com/track/2t1pEpxPz91KldW7C0FyZv",
+      albumCover:
+        "https://cdn-images.dzcdn.net/images/cover/001bcf1a542eaa10f577c9ff0ab7ca85/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
     },
   ];
 
   useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-  const safeIndex = Math.max(0, Math.min(currentSongIndex, songs.length - 1));
+    const raf = requestAnimationFrame(() => setIsLoaded(true));
+    // rotate songs every 5 seconds
+    const rotateInterval = setInterval(() => {
+      setCurrentSongIndex((i) => (i + 1) % songs.length);
+    }, 5000);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      clearInterval(rotateInterval);
+    };
+  }, [songs.length]);
+
+  const currentSong = songs[currentSongIndex % songs.length];
 
   return (
     <section
-      className={`mb-12 transition-all duration-1000 delay-325 ${
+      className={`transition-all duration-1000 delay-325 ${
         isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <h2 className="text-l font-medium mb-2 text-foreground">listening to</h2>
+      <div className="mt-3">
+        <a
+          href={currentSong.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-block w-fit"
+        >
+          <div className="text-gray-300 rounded-lg border-gray-200 border-opacity-5 from-card/80 to-card/40  transition-all overflow-hidden flex h-12 w-48">
+            <div className="relative w-12 h-16 align-middle bg-muted flex-shrink-0 overflow-hidden">
+              <Image
+                src={currentSong.albumCover || "/placeholder.svg"}
+                alt={`${currentSong.title} album cover`}
+                fill
+                className="object-cover  transition-transform duration-300"
+              />
+            </div>
 
-      <div className="hidden sm:flex sm:flex-row sm:gap-6">
-        {songs.map((song, index) => (
-          <div key={index} className="flex items-center gap-2">
-            <span className="text-lg animate-spin">💿</span>
-            <a
-              href={song.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-gray-100 hover:text-gray-300 transition-colors"
-            >
-              {song.title}
-            </a>
+            <div className="flex-1 px-3 py-2 flex flex-col justify-between">
+              <div className="min-w-0">
+                <p className="font-semibold text-foreground text-xs truncate group-hover:text-green-400 transition-colors">
+                  {currentSong.title}
+                </p>
+                <p className="text-xs text-muted-foreground truncate">
+                  {currentSong.artist}
+                </p>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="sm:hidden">
-        <div className="flex items-center gap-2">
-          <span className="text-lg animate-spin">💿</span>
-          <a
-            href={songs[safeIndex].url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-sm text-gray-100 hover:text-gray-300 transition-colors"
-          >
-            {songs[safeIndex].title}
-          </a>
-        </div>
+        </a>
       </div>
     </section>
   );

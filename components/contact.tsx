@@ -1,33 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Newsreader } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
-const MotionSection = motion.section as unknown as React.ComponentType<any>;
+type MotionSectionProps = React.ComponentProps<"section"> &
+  HTMLMotionProps<"section">;
+
+const MotionSection =
+  motion.section as unknown as React.ComponentType<MotionSectionProps>;
 
 export default function ContactSection() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [visitorTime, setVisitorTime] = useState<Date | null>(null);
-
-  useEffect(() => {
-    setVisitorTime(new Date());
-    setIsLoaded(true);
-  }, []);
-
-  const formatTime = (date: Date | null) => {
-    if (!date) return "";
-    try {
-      return date.toLocaleString(undefined, {
-        dateStyle: "medium",
-        timeStyle: "short",
-      });
-    } catch (e) {
-      return date.toString();
-    }
-  };
+  const [visitorTime] = useState<Date | null>(() => new Date());
 
   const weekdayName = (date: Date | null) => {
     if (!date) return null;
@@ -48,11 +34,6 @@ export default function ContactSection() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <h2 className="font-medium">Contact</h2>
-      {/* <div className=" text-gray-100 flex space-x-4">
-        <button className="btn btn-xs px-3 py-1 text-xs">
-          <a href="#">resume</a>
-        </button>
-      </div> */}
       <div
         className={`${newsreader.className} text-gray-100 flex text-l flex-wrap gap-2 sm:gap-6 mb-2`}
       >
