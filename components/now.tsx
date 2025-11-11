@@ -20,7 +20,7 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <h2 className="font-medium">Now</h2>
+      <h2 className="font-medium">now</h2>
       <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many

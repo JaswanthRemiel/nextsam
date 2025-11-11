@@ -40,10 +40,9 @@ export default function ListeningSection() {
 
   useEffect(() => {
     const raf = requestAnimationFrame(() => setIsLoaded(true));
-    // rotate songs every 5 seconds
     const rotateInterval = setInterval(() => {
       setCurrentSongIndex((i) => (i + 1) % songs.length);
-    }, 5000);
+    }, 10000);
 
     return () => {
       cancelAnimationFrame(raf);
@@ -66,10 +65,10 @@ export default function ListeningSection() {
           rel="noopener noreferrer"
           className="group inline-block w-fit"
         >
-          <div className="text-gray-300 rounded-lg border-gray-200 border-opacity-5 from-card/80 to-card/40  transition-all overflow-hidden flex h-12 w-48">
-            <div className="relative w-12 h-16 align-middle bg-muted flex-shrink-0 overflow-hidden">
+          <div className="text-gray-300 rounded-lg border border-gray-50 border-opacity-15 from-card/80 to-card/40   overflow-hidden flex h-12 w-48">
+            <div className="relative w-12 h-12 align-middle bg-muted flex-shrink-0 overflow-hidden">
               <Image
-                src={currentSong.albumCover || "/placeholder.svg"}
+                src={currentSong.albumCover}
                 alt={`${currentSong.title} album cover`}
                 fill
                 className="object-cover  transition-transform duration-300"
