@@ -21,7 +21,7 @@ export default function ContactSection() {
       return date
         .toLocaleDateString(undefined, { weekday: "long" })
         .toLowerCase();
-    } catch (e) {
+    } catch {
       return null;
     }
   };
@@ -29,9 +29,9 @@ export default function ContactSection() {
   return (
     <MotionSection
       className="space-y-4"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
+      transition={{ duration: 0.45 }}
     >
       <h2 className="font-medium">Contact</h2>
       <div

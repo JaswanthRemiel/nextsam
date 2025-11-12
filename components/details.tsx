@@ -3,14 +3,22 @@ export const twitter = "https://twitter.com/jrxag_official";
 export const github = "https://github.com/jaswanthremiel";
 export const youtube = "https://youtube.com/@remielgraphy";
 
-export const projects = [
+export const projectItems = [
   {
     title: "GitSush",
     href: "http://github.remiel.work/gitsush/",
     description:
       "GitSush is a quirky and efficient CLI tool that wraps git add, commit, and push into a single command. With gshh, you can handle your Git workflow like a sushi chef fast, clean, and with style. Perfect for developers who love automation with a dash of fun.",
     status: "in-progress",
-    badges: ["in-progress", "live"],
+    badges: ["live", "in-progress"],
+  },
+  {
+    title: "Multi-Model Classification",
+    href: "http://github.remiel.work/MultiModelClassification/",
+    description:
+      "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
+    status: "archived",
+    badges: ["live", "in-progress"],
   },
   {
     title: "LinkDescrip AI",
@@ -27,14 +35,6 @@ export const projects = [
       "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme.",
     status: "live",
     badges: ["live"],
-  },
-  {
-    title: "Multi-Model Classification",
-    href: "http://github.remiel.work/MultiModelClassification/",
-    description:
-      "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
-    status: "archived",
-    badges: ["archived"],
   },
   {
     title: "AI Text Summarizer",
@@ -63,24 +63,51 @@ export const writings = [
   {
     href: "https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4",
     title: "Must-have Design Resources in 2023",
-    description: "most important resources for graphic designer",
+    description:
+      "Aswe move further into the 21st century, the landscape of graphic design is changing rapidly. To ensure that you have the skills and knowledge needed to stay ahead of the game in 2022, it’s important to know what graphic design resources will be essential. ",
   },
   {
     href: "https://medium.com/design-bootcamp/the-5-mistakes-that-ux-beginners-make-1c131598cff3",
     title: "The 5 mistakes that UX beginners make",
-    description: "the most common mistakes and how you can avoid.",
-  },
-  {
-    href: "https://medium.com/design-bootcamp/my-top-10-favourite-fonts-of-2021-f8434adde25c",
-    title: "My top 5 favourite fonts of 2021",
-    description: "fonts are a great way to liven up your projects.",
+    description:
+      "The first time I started designing user interfaces, I made every mistake that it was possible to make, including designing unusable interfaces, failing to follow client directions, and not following basic best practices. If you’re new to UX design like I was when I started out, it can be difficult to examine what are the most common mistakes and how you can avoid them in your own work. Here are the five biggest mistakes that UX beginners make.",
   },
 ];
 
-export const building = [
+export const songs = [
   {
-    href: "https://remiel.fyi/linkdescrip-ai/",
-    title: "LinkDescrip AI",
-    description: "Simple, optimized LinkedIn headlines generator",
+    title: "Perfect",
+    artist: "Ed Sheeran",
+    url: "https://open.spotify.com/track/0tgVpDi06FyKpA1z0VMD4v",
+    albumCover:
+      "https://cdn-images.dzcdn.net/images/cover/007b5e41dae0dd99ade00f509db734d4/1900x1900-000000-80-0-0.jpg?w=300&h=300&fit=crop",
+  },
+  {
+    title: "Golden Hour",
+    artist: "JVKE",
+    url: "https://open.spotify.com/track/4yNk9iz9WVJikRFle3XEvn",
+    albumCover:
+      "https://cdn-images.dzcdn.net/images/cover/845eff477946539849c7291510d61daf/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
+  },
+  {
+    title: "Monica",
+    artist: "Anirudh Ravichander",
+    url: "https://open.spotify.com/track/2t1pEpxPz91KldW7C0FyZv",
+    albumCover:
+      "https://cdn-images.dzcdn.net/images/cover/001bcf1a542eaa10f577c9ff0ab7ca85/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
+  },
+  {
+    title: "Señorita",
+    artist: "Camila Cabello",
+    url: "https://open.spotify.com/track/0TK2YIli7K1leLovkQiNik?si=9f5b429f9adb4303",
+    albumCover:
+      "https://cdn-images.dzcdn.net/images/cover/4426e8a06d8d0cd96263094c6178bbf9/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
+  },
+  {
+    title: "Love Me",
+    artist: "Justin Bieber",
+    url: "https://open.spotify.com/track/0yIywEquxORnu1dR0WYsdN",
+    albumCover:
+      "https://cdn-images.dzcdn.net/images/cover/a40e48bd5bae166186dc04c57efdae7a/500x500-000000-80-0-0.jpg?w=300&h=300&fit=crop",
   },
 ];
