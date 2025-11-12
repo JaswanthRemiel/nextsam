@@ -16,11 +16,11 @@ export function Now() {
   return (
     <MotionSection
       className="space-y-8"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
+      transition={{ duration: 0.45 }}
     >
-      <h2 className="font-medium">now</h2>
+      <h2 className="font-medium text-gray-300">now</h2>
       <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
