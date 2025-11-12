@@ -3,6 +3,7 @@ import { Now } from "@/components/now";
 import Projects from "@/components/projects";
 import Writing from "@/components/writing";
 import ContactSection from "@/components/contact";
+import { ExperienceDemo } from "@/components/experience";
 
 export default function Page() {
   return (
@@ -10,8 +11,8 @@ export default function Page() {
       <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
         <Header />
         <Projects />
+        <ExperienceDemo />
         <Writing />
-        <Now />
         <ContactSection />
       </main>
     </div>

@@ -23,11 +23,15 @@ export function Now() {
       <h2 className="font-medium text-gray-300">now</h2>
       <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p>
-          Currently juggling multiple hats (figuratively—I don&apos;t own many
-          hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D
-          India, crafting AI-driven content moderation tools and learning
-          something new every day. When not working on cutting-edge projects,
-          I&apos;m busy building my personal brand and sharing my journey on{" "}
+          currently piloting a spaceship powered by caffeine, algorithms, and a
+          dash of design magic, i am deep in the matrix as an sde-1 at ncompass.
+          debugging code feels more like slaying pixelated dragons than fixing
+          bugs. from mixing pixels as a design jury at awwwards to whipping up
+          machine learning magic at samsung r&d india and microsoft, my career
+          path is starting to look like a marvel multiverse, minus the cape, but
+          i am open to suggestions. when not wrestling with frontend frameworks
+          or whispering sweet nothings to cloud servers, I share my epic tech
+          quests and cringe-worthy memes on{" "}
           <Link
             href={links.youtube}
             target="_blank"
@@ -46,11 +50,15 @@ export function Now() {
           , if you&apos;re curious.
         </p>
         <p>
-          Between debugging code and brainstorming the next viral tweet or
-          video, I like to keep things fun. Exploring content creation and
-          storytelling has become a creative outlet, letting me connect with an
-          amazing community while showcasing my passion for design, tech, and
-          sometimes the occasional gaming session.
+          whether i am shipping ai tools, hosting impromptu design battles, or
+          plotting the next viral thread, my mission is to build, break, and
+          boldly broadcast every win and legendary fail to my growing tribe of
+          creators, coders, and occasional late-night gamers. why just wear many
+          hats when you can architect your own ecosystem? storytelling, building
+          communities, and scaling design and dev mountains are all part of the
+          daily grind. join me if you want hacks, laughs, and a
+          behind-the-scenes pass into the wild world of tech, design, and a
+          little bit of healthy chaos.
         </p>
       </div>
     </MotionSection>

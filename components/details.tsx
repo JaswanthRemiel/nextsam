@@ -64,13 +64,13 @@ export const writings = [
     href: "https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4",
     title: "Must-have Design Resources in 2023",
     description:
-      "Aswe move further into the 21st century, the landscape of graphic design is changing rapidly. To ensure that you have the skills and knowledge needed to stay ahead of the game in 2022, it’s important to know what graphic design resources will be essential. ",
+      "Graphic design is transforming rapidly as we move deeper into the 21st century. To stay ahead, it’s important to keep learning and seek out the latest resources and skills that will be most valuable now and in the years to come. Adapting to these changes ensures you remain competitive and creative in a fast-evolving field.",
   },
   {
     href: "https://medium.com/design-bootcamp/the-5-mistakes-that-ux-beginners-make-1c131598cff3",
     title: "The 5 mistakes that UX beginners make",
     description:
-      "The first time I started designing user interfaces, I made every mistake that it was possible to make, including designing unusable interfaces, failing to follow client directions, and not following basic best practices. If you’re new to UX design like I was when I started out, it can be difficult to examine what are the most common mistakes and how you can avoid them in your own work. Here are the five biggest mistakes that UX beginners make.",
+      "When I began designing interfaces, I made every possible mistake. Learning from common pitfalls has shaped my approach. These are the top five errors beginners should watch out for.",
   },
 ];
 

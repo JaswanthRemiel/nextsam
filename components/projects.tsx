@@ -73,7 +73,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <p className="text-sm font-mono justify-end text-gray-400 mt-1">
+              <p className="text-sm font-mono text-justify text-gray-400 mt-1 ">
                 {p.description}
               </p>
             </div>
