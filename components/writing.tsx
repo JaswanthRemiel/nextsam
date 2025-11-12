@@ -20,7 +20,9 @@ function WritingItem({ href, title, description }: WritingItemProps) {
       >
         <span className="underline">{title}</span>
       </Link>
-      <p className="text-sm font-mono text-gray-400 mt-1">{description}</p>
+      <p className="text-sm text-justify font-mono text-gray-400 mt-1">
+        {description}
+      </p>
     </div>
   );
 }
