@@ -1,7 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -28,42 +27,29 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    /* Prevent horizontal scrolling */
-    @apply overflow-x-hidden;
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
   }
-
-  /* Hide vertical scrollbar but keep scrolling on mobile */
   @media (max-width: 768px) {
     html,
     body {
-      height: 100%; /* Ensure full height for scrolling */
-      overflow-y: scroll; /* Enable scrolling */
+      height: 100%;
+      overflow-y: scroll;
     }
-
-    /* Hide the scrollbar but still allow scrolling */
     body::-webkit-scrollbar {
-      display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
+      display: none;
     }
-
-    /* For Firefox, hide the scrollbar but keep the ability to scroll */
     body {
-      scrollbar-width: none; /* Hide scrollbar in Firefox */
+      scrollbar-width: none;
     }
   }
 }
-
-/* Show a thin, rounded horizontal scrollbar (light/gray) for elements that opt in.
-   This overrides the global "hide scrollbar" rule for small screens when the
-   element has the .show-horizontal-scroll class. */
 @media (max-width: 768px) {
   .show-horizontal-scroll {
-    /* Firefox */
     scrollbar-width: thin;
-    scrollbar-color: #f7fafc transparent; /* gray-100 thumb, transparent track */
+    scrollbar-color: #f7fafc transparent;
   }
-
-  /* Webkit (Chrome, Safari, Edge) */
   .show-horizontal-scroll::-webkit-scrollbar {
     height: 8px;
   }
@@ -71,7 +57,7 @@
     background: transparent;
   }
   .show-horizontal-scroll::-webkit-scrollbar-thumb {
-    background: #f7fafc; /* tailwind gray-100 */
+    background: #f7fafc;
     border-radius: 9999px;
   }
 }

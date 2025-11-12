@@ -21,7 +21,7 @@ export default function ContactSection() {
       return date
         .toLocaleDateString(undefined, { weekday: "long" })
         .toLowerCase();
-    } catch (e) {
+    } catch {
       return null;
     }
   };
