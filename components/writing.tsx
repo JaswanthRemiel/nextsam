@@ -18,9 +18,15 @@ function WritingItem({ href, title, description }: WritingItemProps) {
         target="_blank"
         className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
       >
-        <span className="underline">{title}</span>
+        <span
+          className="text-sm underline under
+line-offset-4
+        "
+        >
+          {title}
+        </span>
       </Link>
-      <p className="text-sm text-justify font-mono text-gray-400 mt-1">
+      <p className="text-sm md:text-justify font-mono text-gray-400 mt-1">
         {description}
       </p>
     </div>
