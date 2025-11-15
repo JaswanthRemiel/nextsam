@@ -21,7 +21,12 @@ export default function Projects() {
                   href={p.href}
                   className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
                 >
-                  <span>{p.title}</span>
+                  <span
+                    className="text-sm
+                  "
+                  >
+                    {p.title}
+                  </span>
                   <motion.span whileHover={{ x: 2 }}>
                     <span className="inline-block opacity-50 ml-0.5">
                       <svg
@@ -73,7 +78,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <p className="text-sm font-mono text-justify text-gray-400 mt-1 ">
+              <p className="text-sm font-mono text-gray-400 mt-1 md:text-justify">
                 {p.description}
               </p>
             </div>

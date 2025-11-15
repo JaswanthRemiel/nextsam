@@ -13,14 +13,6 @@ export const projectItems = [
     badges: ["live", "in-progress"],
   },
   {
-    title: "Multi-Model Classification",
-    href: "http://github.remiel.work/MultiModelClassification/",
-    description:
-      "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
-    status: "archived",
-    badges: ["live", "in-progress"],
-  },
-  {
     title: "LinkDescrip AI",
     href: "https://linkdescrip-ai.vercel.app/",
     description:
@@ -41,6 +33,14 @@ export const projectItems = [
     href: "https://github.remiel.work/ai-summarizer/",
     description:
       "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts. Leveraging the advanced capabilities of Hugging Face's Facebook BART model, this project efficiently processes input text and generates meaningful summaries.",
+    status: "archived",
+    badges: ["archived"],
+  },
+  {
+    title: "Multi-Model Classification",
+    href: "http://github.remiel.work/MultiModelClassification/",
+    description:
+      "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
     status: "archived",
     badges: ["archived"],
   },

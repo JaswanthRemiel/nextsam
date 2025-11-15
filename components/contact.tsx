@@ -79,11 +79,11 @@ export default function ContactSection() {
               " have a nice day ahead."
             )}
           </a>
-          <a
+          {/* <a
             className={`text-l text-muted-foreground ${newsreader.className} text-gray-100`}
           >
             created with love from 🇮🇳
-          </a>
+          </a> */}
         </div>
       </div>
     </MotionSection>
