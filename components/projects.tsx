@@ -15,7 +15,10 @@ export default function Projects() {
         <h2 className="font-medium text-gray-300">projects</h2>
         <div className="space-y-6">
           {projectItems.map((p) => (
-            <div key={p.href}>
+            <div
+              key={p.href}
+              className=" border border-opacity-5 border-gray-600 p-3 rounded-lg"
+            >
               <div className="flex items-center space-x-3">
                 <Link
                   href={p.href}
