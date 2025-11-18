@@ -17,7 +17,7 @@ export default function Projects() {
           {projectItems.map((p) => (
             <div
               key={p.href}
-              className=" border border-opacity-10 border-gray-500 p-3 rounded-lg"
+              className=" border border-opacity-5 border-gray-600 p-3 rounded-lg"
             >
               <div className="flex items-center space-x-3">
                 <Link

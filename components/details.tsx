@@ -5,12 +5,20 @@ export const youtube = "https://youtube.com/@remielgraphy";
 
 export const projectItems = [
   {
+    title: "itsGOtime - uptime monitor",
+    href: "https://github.remiel.work/itsGOtime/",
+    description:
+      "a self-hosted uptime monitoring solution that runs entirely on GitHub infrastructure. It's designed as a template repository, allowing you to quickly deploy your own monitoring system without the need for external servers or paid monitoring services.",
+    status: "in-progress",
+    badges: ["live", "building"],
+  },
+  {
     title: "GitSush",
     href: "http://github.remiel.work/gitsush/",
     description:
       "GitSush is a quirky and efficient CLI tool that wraps git add, commit, and push into a single command. With gshh, you can handle your Git workflow like a sushi chef fast, clean, and with style. Perfect for developers who love automation with a dash of fun.",
     status: "in-progress",
-    badges: ["live", "in-progress"],
+    badges: ["live", "building"],
   },
   {
     title: "LinkDescrip AI",
@@ -27,14 +35,6 @@ export const projectItems = [
       "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme.",
     status: "live",
     badges: ["live"],
-  },
-  {
-    title: "AI Text Summarizer",
-    href: "https://github.remiel.work/ai-summarizer/",
-    description:
-      "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts. Leveraging the advanced capabilities of Hugging Face's Facebook BART model, this project efficiently processes input text and generates meaningful summaries.",
-    status: "archived",
-    badges: ["archived"],
   },
   {
     title: "Multi-Model Classification",
