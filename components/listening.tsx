@@ -35,7 +35,6 @@ export default function ListeningSection() {
   const currentSong = songs[currentSongIndex % songs.length];
 
   return (
-    <motion.div>
       <section>
         <div className="mt-3">
           <a
@@ -68,6 +67,5 @@ export default function ListeningSection() {
           </a>
         </div>
       </section>
-    </motion.div>
   );
 }

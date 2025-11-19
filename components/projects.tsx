@@ -91,10 +91,10 @@ export function ProjectCard({
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 border border-opacity-25 border-gray-500 py-0 text-[10px]"
+                className="px-1 border rounded-sm border-opacity-25 border-gray-500 py-0 text-[10px]"
                 variant="secondary"
                 key={tag}
               >
@@ -109,7 +109,7 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge key={idx} className="flex gap-2 border border-white border-opacity-20 px-2 py-1 text-[10px]">
                   {link.icon}
                   {link.type}
                 </Badge>
