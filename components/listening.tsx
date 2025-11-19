@@ -35,11 +35,7 @@ export default function ListeningSection() {
   const currentSong = songs[currentSongIndex % songs.length];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-    >
+    <motion.div>
       <section>
         <div className="mt-3">
           <a

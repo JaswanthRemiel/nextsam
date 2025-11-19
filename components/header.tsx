@@ -10,11 +10,7 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 export function Header() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-    >
+    <motion.div>
       <header className="space-y-4">
         <div className="flex items-start">
           <Image

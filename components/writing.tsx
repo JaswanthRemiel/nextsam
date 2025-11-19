@@ -44,11 +44,7 @@ export default function Writing() {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-    >
+    <motion.div>
       <section className="space-y-8">
         <h2 className="font-medium text-gray-300">writing</h2>
         <div className="space-y-6">

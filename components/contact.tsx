@@ -27,12 +27,7 @@ export default function ContactSection() {
   };
 
   return (
-    <MotionSection
-      className="space-y-4"
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-    >
+    <MotionSection>
       <h2 className="font-medium text-gray-300">contact</h2>
       <div className="flex flex-col gap-y-1">
         <div
