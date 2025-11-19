@@ -1,6 +1,5 @@
 import { Header } from "@/components/header";
-import { Now } from "@/components/now";
-import Projects from "@/components/projects";
+import { Projects } from "@/components/projects";
 import Writing from "@/components/writing";
 import ContactSection from "@/components/contact";
 import { ExperienceDemo } from "@/components/experience";
