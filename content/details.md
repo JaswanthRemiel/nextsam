@@ -70,15 +70,9 @@ projects:
     active: true
     description: "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme."
     technologies:
-      - "Next.js"
-      - "Typescript"
-      - "PostgreSQL"
-      - "Prisma"
-      - "TailwindCSS"
-      - "Shadcn UI"
-      - "Magic UI"
-      - "Stripe"
-      - "Cloudflare Workers"
+      - "Go"
+      - "HTML"
+      - "CSS"
     links:
       - type: "Github"
         href: "https://github.remiel.work/batmode/"
