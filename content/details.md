@@ -1,26 +1,5 @@
 ---
 projects:
-  - title: "Gitsush"
-    href: "https://github.remiel.work/gitsush/"
-    dates: "Jan 2024 - Feb 2024"
-    active: true
-    description: "a quirky and efficient CLI tool that wraps git add, commit, and push into a single command. With gshh, you can handle your Git workflow like a sushi chef fast, clean, and with style. Perfect for developers who love automation with a dash of fun."
-    technologies:
-      - "Next.js"
-      - "Typescript"
-      - "PostgreSQL"
-      - "Prisma"
-      - "TailwindCSS"
-      - "Stripe"
-      - "Shadcn UI"
-      - "Magic UI"
-    links:
-      - type: "Website"
-        href: "https://github.remiel.work/gitsush/"
-        icon: "Github"
-    image: ""
-    video: "/videos/chat-collect.mp4"
-
   - title: "LinkDescrip AI"
     href: "https://linkdescrip-ai.vercel.app/"
     dates: "June 2023 - Present"
@@ -43,7 +22,7 @@ projects:
         href: "https://github.com/JaswanthRemiel/linkdescrip-ai"
         icon: "Github"
     image: ""
-    video: "https://cdn.magicui.design/bento-grid.mp4"
+    video: "/videos/linkdescrip.mp4"
 
   - title: "itsGOtime "
     href: "https://llm.report"
@@ -62,7 +41,7 @@ projects:
         href: "https://github.com/JaswanthRemiel/itsGOtime"
         icon: "Github"
     image: ""
-    video: "https://cdn.llm.report/openai-demo.mp4"
+    video: "/videos/itsgotime.mp4"
 
   - title: "Batmode extension"
     href: "https://github.remiel.work/batmode/"
@@ -78,8 +57,28 @@ projects:
         href: "https://github.remiel.work/batmode/"
         icon: "Github"
     image: ""
-    video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4"
+    video: "/videos/batmode.mp4"
 
+  - title: "Gitsush"
+    href: "https://github.remiel.work/gitsush/"
+    dates: "Jan 2024 - Feb 2024"
+    active: true
+    description: "a quirky and efficient CLI tool that wraps git add, commit, and push into a single command. With gshh, you can handle your Git workflow like a sushi chef fast, clean, and with style. Perfect for developers who love automation with a dash of fun."
+    technologies:
+      - "Next.js"
+      - "Typescript"
+      - "PostgreSQL"
+      - "Prisma"
+      - "TailwindCSS"
+      - "Stripe"
+      - "Shadcn UI"
+      - "Magic UI"
+    links:
+      - type: "Website"
+        href: "https://github.remiel.work/gitsush/"
+        icon: "Github"
+    image: ""
+    video: "/videos/gitsush.mp4"
 writings:
   - title: "Stop calling yourself a frontend developer, it’s killing your career"
     href: "https://medium.com/ux-planet/stop-calling-yourself-a-frontend-developer-its-killing-your-career-9e0150196b99"
