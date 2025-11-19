@@ -12,6 +12,10 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
 import { Globe, Github } from "lucide-react";
+import ContactSection from "@/components/contact";
+import { Newsreader } from "next/font/google";
+
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 const Icons = {
   Globe: <Globe className="size-3" />,
@@ -34,6 +38,7 @@ interface Project {
   video?: string;
   links?: ProjectLink[];
 }
+
 interface Props {
   title: string;
   href?: string;
@@ -51,7 +56,7 @@ interface Props {
   className?: string;
 }
 
-export function ProjectCard({
+function ProjectCard({
   title,
   href,
   description,
@@ -141,57 +146,58 @@ export function ProjectCard({
   );
 }
 
-export async function Projects() {
+export default async function ProjectsPage() {
   const data = await getDetails();
-  const projects = (data.projects || []).slice(0, 4);
+  const projects = (data.projects as Project[]) || [];
 
   return (
-    <section className="space-y-7">
-      <h2 className="font-medium text-gray-300">projects</h2>
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
-          {projects.map((project: Project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              href={project.href}
-              description={project.description}
-              dates={project.dates}
-              tags={project.technologies}
-              image={project.image}
-              video={project.video}
-              links={project.links?.map((link: ProjectLink) => ({
-                ...link,
-                icon: Icons[link.icon as keyof typeof Icons] || null,
-              }))}
-            />
-          ))}
-        </div>
-
-        <div className="flex justify-end">
-          <Link
-            href="/projects"
-            className="text-xs text-gray-400 inline-flex items-center gap-1 hover:text-gray-300 transition-colors"
+    <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
+      <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
+        <Link
+          href="/"
+          className={`${newsreader.className} text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2`}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            more projects
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 8H12M12 8L9 5M12 8L9 11"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <path
+              d="M12 12L4 4M4 4H10M4 4V10"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          back to portfolio
+        </Link>
+
+        <section className="space-y-7">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
+            {projects.map((project: Project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                href={project.href}
+                description={project.description}
+                dates={project.dates}
+                tags={project.technologies}
+                image={project.image}
+                video={project.video}
+                links={project.links?.map((link: ProjectLink) => ({
+                  ...link,
+                  icon: Icons[link.icon as keyof typeof Icons] || null,
+                }))}
               />
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </section>
+            ))}
+          </div>
+        </section>
+
+        <ContactSection />
+      </main>
+    </div>
   );
 }

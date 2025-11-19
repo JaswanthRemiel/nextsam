@@ -11,14 +11,14 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 export function Header() {
   return (
     <motion.div>
-      <header className="space-y-4">
+      <header className="space-y-3">
         <div className="flex items-start">
           <Image
-            src="https://raw.githubusercontent.com/JaswanthRemiel/nextsam/refs/heads/main/public/logo.png"
+            src="/images/logo.webp"
             alt="Jaswanth Remiel Logo"
             width={40}
             height={40}
-            className="mr-4"
+            className="mr-4 "
           />
         </div>
         <br></br>

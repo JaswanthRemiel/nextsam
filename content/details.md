@@ -2,16 +2,14 @@
 projects:
   - title: "LinkDescrip AI"
     href: "https://linkdescrip-ai.vercel.app/"
-    dates: "June 2023 - Present"
+    dates: "Sep 2024 - Feb 2025"
     active: true
     description: "a web application that helps users generate optimized LinkedIn headlines based on their professional bios. By utilizing the power of natural language processing models, this tool provides catchy and professional headlines to enhance users' LinkedIn profiles."
     technologies:
       - "Next.js"
       - "Typescript"
-      - "PostgreSQL"
-      - "Prisma"
-      - "TailwindCSS"
-      - "Stripe"
+      - "Vercel"
+      - "Gemini"
       - "Shadcn UI"
       - "Magic UI"
     links:
@@ -26,13 +24,15 @@ projects:
 
   - title: "itsGOtime "
     href: "https://llm.report"
-    dates: "April 2023 - September 2023"
+    dates: "November 2025 - Present"
     active: true
     description: "A lightweight, efficient uptime monitoring system built with Go and HTML. Monitor your websites, APIs, and services with automated checks, historical tracking, and a beautiful status page, all powered by GitHub Actions and GitHub Pages."
     technologies:
-      - "Go"
-      - "GitHub Actions"
-      - "GitHub Pages"
+      - "GO"
+      - "Github Actions"
+      - "go/context"
+      - "io/ioutil"
+      - "net/http"
     links:
       - type: "Demo"
         href: "http://github.remiel.work/itsGOtime/"
@@ -45,13 +45,13 @@ projects:
 
   - title: "Batmode extension"
     href: "https://github.remiel.work/batmode/"
-    dates: "April 2023 - March 2024"
+    dates: "April 2023 - May 2023"
     active: true
     description: "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme."
     technologies:
-      - "Go"
-      - "HTML"
-      - "CSS"
+      - "JavaScript"
+      - "Chrome"
+      - "HTML/CSS"
     links:
       - type: "Github"
         href: "https://github.remiel.work/batmode/"
@@ -61,20 +61,19 @@ projects:
 
   - title: "Gitsush"
     href: "https://github.remiel.work/gitsush/"
-    dates: "Jan 2024 - Feb 2024"
+    dates: "April 2025 - Present"
     active: true
     description: "a quirky and efficient CLI tool that wraps git add, commit, and push into a single command. With gshh, you can handle your Git workflow like a sushi chef fast, clean, and with style. Perfect for developers who love automation with a dash of fun."
     technologies:
-      - "Next.js"
-      - "Typescript"
-      - "PostgreSQL"
-      - "Prisma"
-      - "TailwindCSS"
-      - "Stripe"
-      - "Shadcn UI"
-      - "Magic UI"
+      - "Javascript"
+      - "Github"
+      - "npmjs"
+      - "Git"
     links:
       - type: "Website"
+        href: "https://www.npmjs.com/package/gitsush"
+        icon: "Globe"
+      - type: "Source"
         href: "https://github.remiel.work/gitsush/"
         icon: "Github"
     image: ""

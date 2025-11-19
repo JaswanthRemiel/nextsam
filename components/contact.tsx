@@ -28,7 +28,7 @@ export default function ContactSection() {
 
   return (
     <MotionSection>
-      <h2 className="font-medium text-gray-300">contact</h2>
+      <h2 className="font-medium text-gray-300 mb-6">contact</h2>
       <div className="flex flex-col gap-y-1">
         <div
           className={`${newsreader.className} text-orange-100 flex text-l flex-wrap gap-4 sm:gap-6`}
@@ -74,11 +74,6 @@ export default function ContactSection() {
               " have a nice day ahead."
             )}
           </a>
-          {/* <a
-            className={`text-l text-muted-foreground ${newsreader.className} text-gray-100`}
-          >
-            created with love from 🇮🇳
-          </a> */}
         </div>
       </div>
     </MotionSection>

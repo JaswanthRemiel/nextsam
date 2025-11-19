@@ -13,6 +13,12 @@ interface WritingItemProps {
   description: string;
 }
 
+interface Writing {
+  href: string;
+  title: string;
+  description: string;
+}
+
 function WritingItem({ href, title, description }: WritingItemProps) {
   return (
     <div>
@@ -21,11 +27,7 @@ function WritingItem({ href, title, description }: WritingItemProps) {
         target="_blank"
         className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
       >
-        <span
-          className="text-sm underline underline-offset-4"
-        >
-          {title}
-        </span>
+        <span className="text-sm underline underline-offset-4">{title}</span>
       </Link>
       <div className="text-sm md:text-justify font-mono text-gray-400 mt-1">
         <Markdown>{description}</Markdown>
@@ -35,7 +37,7 @@ function WritingItem({ href, title, description }: WritingItemProps) {
 }
 
 export default function Writing() {
-  const [writings, setWritings] = useState<any[]>([]);
+  const [writings, setWritings] = useState<Writing[]>([]);
 
   useEffect(() => {
     getDetails().then((data) => {
@@ -45,10 +47,10 @@ export default function Writing() {
 
   return (
     <motion.div>
-      <section className="space-y-8">
+      <section className="space-y-7">
         <h2 className="font-medium text-gray-300">writing</h2>
-        <div className="space-y-6">
-          {writings.map((w) => (
+        <div className="space-y-7">
+          {writings.map((w: Writing) => (
             <WritingItem
               key={w.href}
               href={w.href}
