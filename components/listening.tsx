@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { songs as songsFromDetails } from "./details";
-
+import { getDetails } from "@/lib/data";
 interface Song {
   title: string;
   artist: string;
@@ -13,16 +12,25 @@ interface Song {
 }
 
 export default function ListeningSection() {
-  const songs: Song[] = songsFromDetails as Song[];
+  const [songs, setSongs] = useState<Song[]>([]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   useEffect(() => {
+    getDetails().then((data) => {
+      setSongs(data.songs || []);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (songs.length === 0) return;
     const rotateInterval = setInterval(() => {
       setCurrentSongIndex((i) => (i + 1) % songs.length);
     }, 7000);
 
     return () => clearInterval(rotateInterval);
   }, [songs.length]);
+
+  if (songs.length === 0) return null;
 
   const currentSong = songs[currentSongIndex % songs.length];
 

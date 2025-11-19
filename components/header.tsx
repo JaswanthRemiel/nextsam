@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import * as links from "./details";
 import { Newsreader } from "next/font/google";
 import ListeningSection from "./listening";
 
@@ -41,7 +40,7 @@ export function Header() {
           technology and innovation through engaging content, inspiring a global
           community of creators on my channel,{" "}
           <Link
-            href={links.youtube}
+            href={"https://www.youtube.com/@remielgraphy"}
             className="underline text-gray-100 decoration-gray-100"
           >
             remielgraphy

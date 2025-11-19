@@ -1,93 +1,152 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
-import { projectItems } from "./details";
+import Markdown from "react-markdown";
+import { getDetails } from "@/lib/data";
+import { Globe, Github } from "lucide-react";
 
-export default function Projects() {
+const Icons = {
+  Globe: <Globe className="size-3" />,
+  Github: <Github className="size-3" />,
+};
+
+interface Props {
+  title: string;
+  href?: string;
+  description: string;
+  dates: string;
+  tags: readonly string[];
+  link?: string;
+  image?: string;
+  video?: string;
+  links?: readonly {
+    icon: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
+  className?: string;
+}
+
+export function ProjectCard({
+  title,
+  href,
+  description,
+  dates,
+  tags,
+  link,
+  image,
+  video,
+  links,
+  className,
+}: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+    <Card
+      className={
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+      }
     >
-      <section className="space-y-8">
-        <h2 className="font-medium text-gray-300">projects</h2>
-        <div className="space-y-6">
-          {projectItems.map((p) => (
-            <div
-              key={p.href}
-              className=" border border-opacity-5 border-gray-600 p-3 rounded-lg"
-            >
-              <div className="flex items-center space-x-3">
-                <Link
-                  href={p.href}
-                  className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
-                >
-                  <span
-                    className="text-sm
-                  "
-                  >
-                    {p.title}
-                  </span>
-                  <motion.span whileHover={{ x: 2 }}>
-                    <span className="inline-block opacity-50 ml-0.5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-3 h-3"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 19L19 5M5 5h14v14"
-                        />
-                      </svg>
-                    </span>
-                  </motion.span>
-                </Link>
-
-                <div className=" text-gray-300 ml-2 inline-flex items-center space-x-2">
-                  {(
-                    ((p as { badges?: string[]; status?: string }).badges as
-                      | string[]
-                      | undefined) ||
-                    ((p as { badges?: string[]; status?: string }).status
-                      ? [
-                          (p as { badges?: string[]; status?: string })
-                            .status as string,
-                        ]
-                      : [])
-                  ).map((b, idx) => (
-                    <button
-                      key={idx}
-                      className={`btn btn-xs px-2 text-xs normal-case ${
-                        b === "live"
-                          ? "text-green-400"
-                          : b === "archived"
-                          ? "text-red-400"
-                          : b === "out-of-development"
-                          ? "text-yellow-400"
-                          : "text-orange-100"
-                      }`}
-                      aria-label={`badge-${b}`}
-                    >
-                      {b.replace("-", " ")}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <p className="text-sm font-mono text-gray-400 mt-1 md:text-justify">
-                {p.description}
-              </p>
-            </div>
-          ))}
+      <Link
+        href={href || "#"}
+        className={cn("block cursor-pointer", className)}
+      >
+        {video && (
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+          />
+        )}
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            width={500}
+            height={300}
+            className="h-40 w-full overflow-hidden object-cover object-top"
+          />
+        )}
+      </Link>
+      <CardHeader className="px-2">
+        <div className="space-y-1">
+          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <time className="font-sans text-xs">{dates}</time>
+          <div className="hidden font-sans text-xs underline print:visible">
+            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+          </div>
+          <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+            <Markdown>{description}</Markdown>
+          </div>
         </div>
-      </section>
-    </motion.div>
+      </CardHeader>
+      <CardContent className="mt-auto flex flex-col px-2">
+        {tags && tags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {tags?.map((tag) => (
+              <Badge
+                className="px-1 py-0 text-[10px]"
+                variant="secondary"
+                key={tag}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+      </CardContent>
+      <CardFooter className="px-2 pb-2">
+        {links && links.length > 0 && (
+          <div className="flex flex-row flex-wrap items-start gap-1">
+            {links?.map((link, idx) => (
+              <Link href={link?.href} key={idx} target="_blank">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                  {link.icon}
+                  {link.type}
+                </Badge>
+              </Link>
+            ))}
+          </div>
+        )}
+      </CardFooter>
+    </Card>
+  );
+}
+
+export async function Projects() {
+  const data = await getDetails();
+  const projects = data.projects || [];
+
+  return (
+    <section className="space-y-8">
+       <h2 className="font-medium text-gray-300">projects</h2>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
+        {projects.map((project: any) => (
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            href={project.href}
+            description={project.description}
+            dates={project.dates}
+            tags={project.technologies}
+            image={project.image}
+            video={project.video}
+            links={project.links?.map((link: any) => ({
+              ...link,
+              icon: Icons[link.icon as keyof typeof Icons] || null,
+            }))}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

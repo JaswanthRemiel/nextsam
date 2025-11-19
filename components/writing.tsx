@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { writings } from "./details";
+import Markdown from "react-markdown";
+
+import { useEffect, useState } from "react";
+import { getDetails } from "@/lib/data";
 
 interface WritingItemProps {
   href: string;
@@ -19,21 +22,27 @@ function WritingItem({ href, title, description }: WritingItemProps) {
         className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
       >
         <span
-          className="text-sm underline under
-line-offset-4
-        "
+          className="text-sm underline underline-offset-4"
         >
           {title}
         </span>
       </Link>
-      <p className="text-sm md:text-justify font-mono text-gray-400 mt-1">
-        {description}
-      </p>
+      <div className="text-sm md:text-justify font-mono text-gray-400 mt-1">
+        <Markdown>{description}</Markdown>
+      </div>
     </div>
   );
 }
 
 export default function Writing() {
+  const [writings, setWritings] = useState<any[]>([]);
+
+  useEffect(() => {
+    getDetails().then((data) => {
+      setWritings(data.writings || []);
+    });
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
