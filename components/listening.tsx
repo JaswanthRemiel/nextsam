@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { getDetails } from "@/lib/data";
 interface Song {
@@ -25,7 +24,7 @@ export default function ListeningSection() {
     if (songs.length === 0) return;
     const rotateInterval = setInterval(() => {
       setCurrentSongIndex((i) => (i + 1) % songs.length);
-    }, 7000);
+    }, 15000);
 
     return () => clearInterval(rotateInterval);
   }, [songs.length]);
