@@ -44,7 +44,7 @@ projects:
     video: "/videos/itsgotime.mp4"
 
   - title: "RoastHub"
-    href: "https://github.remiel.work/gitsush/"
+    href: "https://github.com/JaswanthRemiel/RoastHub"
     dates: "Nov 2025"
     active: true
     description: "a xAI-powered roasting machine for fragile egos - bring thick skin and snacks. Strictly for fun: we auto-generate burns so you don't have to pretend you're witty.Warning: may cause laughter, mild humiliation, and an irresistible urge to clap back."
@@ -55,10 +55,10 @@ projects:
       - "xAI"
     links:
       - type: "demo"
-        href: "https://github.remiel.work/roasthub/"
+        href: "https://github.remiel.work/RoastHub/"
         icon: "Globe"
       - type: "Source"
-        href: "https://github.remiel.work/RoastHub/"
+        href: "https://github.com/JaswanthRemiel/RoastHub"
         icon: "Github"
     image: ""
     video: "/videos/roasthub.mp4"
