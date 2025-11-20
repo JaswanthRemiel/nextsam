@@ -43,21 +43,26 @@ projects:
     image: ""
     video: "/videos/itsgotime.mp4"
 
-  - title: "Batmode extension"
-    href: "https://github.remiel.work/batmode/"
-    dates: "April 2023 - May 2023"
+  - title: "RoastHub"
+    href: "https://github.remiel.work/gitsush/"
+    dates: "Nov 2025"
     active: true
-    description: "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme."
+    description: "a xAI-powered roasting machine for fragile egos - bring thick skin and snacks. Strictly for fun: we auto-generate burns so you don't have to pretend you're witty.Warning: may cause laughter, mild humiliation, and an irresistible urge to clap back."
     technologies:
-      - "JavaScript"
-      - "Chrome"
-      - "HTML/CSS"
+      - "Nextjs"
+      - "Github"
+      - "openrouter"
+      - "xAI"
     links:
-      - type: "Github"
-        href: "https://github.remiel.work/batmode/"
+      - type: "demo"
+        href: "https://github.remiel.work/roasthub/"
+        icon: "Globe"
+      - type: "Source"
+        href: "https://github.com/jaswanthremiel/roasthub"
         icon: "Github"
     image: ""
-    video: "/videos/batmode.mp4"
+    video: "/videos/roasthub.mp4"
+
 
   - title: "Gitsush"
     href: "https://github.remiel.work/gitsush/"
@@ -78,6 +83,23 @@ projects:
         icon: "Github"
     image: ""
     video: "/videos/gitsush.mp4"
+
+  - title: "Batmode extension"
+    href: "https://github.remiel.work/batmode/"
+    dates: "April 2023 - May 2023"
+    active: true
+    description: "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve. With one click, transform your browsing experience and enjoy a sleek, modern, and eye-friendly dark theme."
+    technologies:
+      - "JavaScript"
+      - "Chrome"
+      - "HTML/CSS"
+    links:
+      - type: "Github"
+        href: "https://github.remiel.work/batmode/"
+        icon: "Github"
+    image: ""
+    video: "/videos/batmode.mp4"
+
 writings:
   - title: "Stop calling yourself a frontend developer, it’s killing your career"
     href: "https://medium.com/ux-planet/stop-calling-yourself-a-frontend-developer-its-killing-your-career-9e0150196b99"
