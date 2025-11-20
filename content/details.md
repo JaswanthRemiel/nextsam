@@ -58,11 +58,10 @@ projects:
         href: "https://github.remiel.work/roasthub/"
         icon: "Globe"
       - type: "Source"
-        href: "https://github.remiel.work/RoastHub/
+        href: "https://github.remiel.work/RoastHub/"
         icon: "Github"
     image: ""
     video: "/videos/roasthub.mp4"
-
 
   - title: "Gitsush"
     href: "https://github.remiel.work/gitsush/"
