@@ -1,7 +1,7 @@
 ---
 projects:
   - title: "LinkDescrip AI"
-    href: "https://linkdescrip-ai.vercel.app/"
+    href: "https://linkdescrip-ai.remiel.work/"
     dates: "Sep 2024 - Feb 2025"
     active: true
     description: "a web application that helps users generate optimized LinkedIn headlines based on their professional bios. By utilizing the power of natural language processing models, this tool provides catchy and professional headlines to enhance users' LinkedIn profiles."
@@ -14,16 +14,16 @@ projects:
       - "Magic UI"
     links:
       - type: "Demo"
-        href: "https://linkdescrip-ai.vercel.app/"
+        href: "https://linkdescrip-ai.remiel.work/"
         icon: "Globe"
       - type: "Source"
-        href: "https://github.com/JaswanthRemiel/linkdescrip-ai"
+        href: "https://github.remiel.work/linkdescrip-ai/"
         icon: "Github"
     image: ""
     video: "/videos/linkdescrip.mp4"
 
   - title: "itsGOtime "
-    href: "https://llm.report"
+    href: "https://github.com/JaswanthRemiel/itsGOtime"
     dates: "November 2025 - Present"
     active: true
     description: "A lightweight, efficient uptime monitoring system built with Go and HTML. Monitor your websites, APIs, and services with automated checks, historical tracking, and a beautiful status page, all powered by GitHub Actions and GitHub Pages."
