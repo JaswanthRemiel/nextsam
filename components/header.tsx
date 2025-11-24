@@ -14,17 +14,14 @@ export function Header() {
       <header className="space-y-3">
         <div className="flex items-start">
           <Image
-            src="/images/logo.webp"
-            alt="Jaswanth Remiel Logo"
-            width={40}
-            height={40}
+            src="/images/sign2.webp"
+            alt="Jaswanth Remiel"
+            width={60}
+            height={60}
             className="mr-4 "
           />
         </div>
-        <br></br>
-        <h1>
-          <span>Jaswanth Remiel</span>
-        </h1>
+
         <p className={`${newsreader.className} text-gray-100`}>
           where art meets code, I create digital experiences that captivate and
           empower, merging aesthetic brilliance with cutting-edge technology.
