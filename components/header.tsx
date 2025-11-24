@@ -14,7 +14,7 @@ export function Header() {
       <header className="space-y-3">
         <div className="flex items-start">
           <Image
-            src="/images/sign2.webp"
+            src="/images/logo.webp"
             alt="Jaswanth Remiel"
             width={60}
             height={60}
