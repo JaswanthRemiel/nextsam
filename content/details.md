@@ -134,4 +134,14 @@ songs:
     artist: "Justin Bieber"
     url: "https://open.spotify.com/track/0yIywEquxORnu1dR0WYsdN"
     albumCover: "/songs/justin.jpg"
+
+dockIcons:
+  - src: "/icons/file.png"
+    alt: "Projects"
+    label: "Projects"
+    href: "/projects"
+  - src: "/icons/guestbook.png"
+    alt: "Guestbook"
+    label: "Guestbook"
+    href: ""
 ---

@@ -27,6 +27,12 @@ const nextConfig = {
         hostname: "assets.aceternity.com",
         port: "",
         pathname: "/**"
+      },
+      {
+        protocol: "https",
+        hostname: "syd.cloud.appwrite.io",
+        port: "",
+        pathname: "/**"
       }
     ]
   }
