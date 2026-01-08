@@ -20,7 +20,7 @@ projects:
         href: "https://github.remiel.work/linkdescrip-ai/"
         icon: "Github"
     image: ""
-    video: "/videos/linkdescrip.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/linkdescrip.mp4"
 
   - title: "itsGOtime "
     href: "https://github.com/JaswanthRemiel/itsGOtime"
@@ -41,7 +41,7 @@ projects:
         href: "https://github.com/JaswanthRemiel/itsGOtime"
         icon: "Github"
     image: ""
-    video: "/videos/itsgotime.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/itsgotime.mp4"
 
   - title: "RoastHub"
     href: "https://github.com/JaswanthRemiel/RoastHub"
@@ -61,7 +61,7 @@ projects:
         href: "https://github.com/JaswanthRemiel/RoastHub"
         icon: "Github"
     image: ""
-    video: "/videos/roasthub.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/roasthub.mp4"
 
   - title: "Gitsush"
     href: "https://github.remiel.work/gitsush/"
@@ -81,7 +81,7 @@ projects:
         href: "https://github.remiel.work/gitsush/"
         icon: "Github"
     image: ""
-    video: "/videos/gitsush.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/gitsush.mp4"
 
   - title: "Batmode extension"
     href: "https://github.remiel.work/batmode/"
@@ -97,7 +97,7 @@ projects:
         href: "https://github.remiel.work/batmode/"
         icon: "Github"
     image: ""
-    video: "/videos/batmode.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/batmode.mp4"
 
 writings:
   - title: "Stop calling yourself a frontend developer, it’s killing your career"
