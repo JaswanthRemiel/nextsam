@@ -18,7 +18,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn-images.dzcdn.net",
+        hostname: "cdn.jsdelivr.net",
         port: "",
         pathname: "/**"
       },
