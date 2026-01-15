@@ -31,31 +31,39 @@
     color: var(--foreground);
     overflow-x: hidden;
   }
+
   @media (max-width: 768px) {
+
     html,
     body {
       height: 100%;
       overflow-y: scroll;
     }
+
     body::-webkit-scrollbar {
       display: none;
     }
+
     body {
       scrollbar-width: none;
     }
   }
 }
+
 @media (max-width: 768px) {
   .show-horizontal-scroll {
     scrollbar-width: thin;
     scrollbar-color: #f7fafc transparent;
   }
+
   .show-horizontal-scroll::-webkit-scrollbar {
     height: 8px;
   }
+
   .show-horizontal-scroll::-webkit-scrollbar-track {
     background: transparent;
   }
+
   .show-horizontal-scroll::-webkit-scrollbar-thumb {
     background: #f7fafc;
     border-radius: 9999px;

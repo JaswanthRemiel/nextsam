@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Newsreader } from "next/font/google";
-import ListeningSection from "./listening";
+import { GitHubContributions } from "@/components/github-contributions";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
@@ -41,10 +41,13 @@ export function Header() {
           .
         </p>
       </header>
-      <p className={`${newsreader.className} text-gray-100 mt-4`}>
+      <div className="mt-4">
+        <GitHubContributions />
+      </div>
+      {/* <p className={`${newsreader.className} text-gray-100 mt-4`}>
         now listening to
       </p>
-      <ListeningSection />
+      <ListeningSection /> */}
     </motion.div>
   );
 }
