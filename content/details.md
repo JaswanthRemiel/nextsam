@@ -134,4 +134,31 @@ songs:
     artist: "Justin Bieber"
     url: "https://open.spotify.com/track/0yIywEquxORnu1dR0WYsdN"
     albumCover: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/justin.jpg"
+
+research:
+  - title: "AI Research at Samsung R&D"
+    href: ""
+    dates: "March 2024"
+    description: "Conducted cutting-edge AI and machine learning research at Samsung Research & Development India, focusing on innovative solutions and model implementations."
+    technologies:
+      - "Python"
+      - "TensorFlow"
+      - "Machine Learning"
+      - "AI Research"
+    links: []
+    image: ""
+    video: ""
+
+  - title: "Technology Innovation at IPTIF"
+    href: ""
+    dates: "May 2024"
+    description: "Contributed to technology innovation projects at IIT Palakkad Technology IHub Foundation, collaborating with research teams on emerging technologies."
+    technologies:
+      - "Research"
+      - "Innovation"
+      - "IIT Palakkad"
+    links: []
+    image: ""
+    video: ""
 ---
+

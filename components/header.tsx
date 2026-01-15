@@ -22,21 +22,34 @@ export function Header() {
           />
         </div>
 
-        <p className={`${newsreader.className} text-gray-100`}>
-          where art meets code, I create digital experiences that captivate and
-          empower, merging aesthetic brilliance with cutting-edge technology.
-          Every pixel and line of code is a deliberate stroke, shaping intuitive
-          solutions that resonate with users.
+        <p className={`${newsreader.className} text-gray-100 text-justify`}>
+          i'm jaswanth remiel, i build things for the web. full-stack
+          development with a deep focus on ui/ux and design systems. currently
+          diving into machine learning and computer vision, figuring out how to
+          make interfaces smarter. as a microsoft learn student ambassador, i
+          occasionally share what i learn along the way.
         </p>
-        <p className={`${newsreader.className} text-gray-100`}>
-          as a Microsoft Learn Student Ambassador, I share my passion for
-          technology and innovation through engaging content, inspiring a global
-          community of creators on my channel,{" "}
+        <p className={`${newsreader.className} text-gray-100 text-justify`}>
+          you can explore my{" "}
           <Link
-            href={"https://www.youtube.com/@remielgraphy"}
-            className="underline text-gray-100 decoration-gray-100"
+            href="/research"
+            className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"
           >
-            remielgraphy
+            research
+          </Link>
+          {" "}for papers and experiments, or check out{" "}
+          <Link
+            href="/projects"
+            className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"
+          >
+            projects
+          </Link>
+          {" "}for things i've shipped. sometimes i make videos on{" "}
+          <Link
+            href="https://www.youtube.com/@remielgraphy"
+            className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"
+          >
+            youtube
           </Link>
           .
         </p>
