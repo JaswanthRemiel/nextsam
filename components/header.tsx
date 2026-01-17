@@ -12,18 +12,19 @@ export function Header() {
   return (
     <motion.div>
       <header className="space-y-3">
-        <div className="flex items-start">
+        <div className="flex items-start mb-6">
           <Image
-            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/logo.webp"
+            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/catlogo.gif"
             alt="Jaswanth Remiel"
-            width={60}
-            height={60}
-            className="mr-4 "
+            width={55}
+            height={55}
+            className="mr-4 rounded-sm"
+            unoptimized
           />
         </div>
 
         <p className={`${newsreader.className} text-gray-100 text-justify`}>
-          i'm jaswanth remiel, i build things for the web. full-stack
+          i'm <b className="font-bold">jaswanth remiel</b>, i build things for the web. full-stack
           development with a deep focus on ui/ux and design systems. currently
           diving into machine learning and computer vision, figuring out how to
           make interfaces smarter. as a microsoft learn student ambassador, i

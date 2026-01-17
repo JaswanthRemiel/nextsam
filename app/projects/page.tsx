@@ -12,7 +12,6 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
 import { Globe, Github } from "lucide-react";
-import ContactSection from "@/components/contact";
 import { Newsreader } from "next/font/google";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
@@ -153,6 +152,38 @@ export default async function ProjectsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
       <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
+
+        <section className="space-y-7">
+          <div className="flex items-start">
+            <Image
+              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-projects.png"
+              alt="Jaswanth Remiel"
+              width={180}
+              height={180}
+              className="mr-4 "
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
+            {projects.map((project: Project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                href={project.href}
+                description={project.description}
+                dates={project.dates}
+                tags={project.technologies}
+                image={project.image}
+                video={project.video}
+                links={project.links?.map((link: ProjectLink) => ({
+                  ...link,
+                  icon: Icons[link.icon as keyof typeof Icons] || null,
+                }))}
+              />
+            ))}
+          </div>
+        </section>
+      </main>
+      <footer className="mt-auto max-w-3xl mx-auto px-10 sm:px-6 pb-20 w-full">
         <Link
           href="/"
           className={`${newsreader.className} text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2`}
@@ -174,30 +205,7 @@ export default async function ProjectsPage() {
           </svg>
           back to portfolio
         </Link>
-
-        <section className="space-y-7">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
-            {projects.map((project: Project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                href={project.href}
-                description={project.description}
-                dates={project.dates}
-                tags={project.technologies}
-                image={project.image}
-                video={project.video}
-                links={project.links?.map((link: ProjectLink) => ({
-                  ...link,
-                  icon: Icons[link.icon as keyof typeof Icons] || null,
-                }))}
-              />
-            ))}
-          </div>
-        </section>
-
-        <ContactSection />
-      </main>
+      </footer>
     </div>
   );
 }

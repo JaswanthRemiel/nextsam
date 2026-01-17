@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Newsreader } from "next/font/google";
 import { motion, HTMLMotionProps } from "framer-motion";
+import Image from "next/image";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 

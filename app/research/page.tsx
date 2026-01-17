@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
 import ContactSection from "@/components/contact";
 import { Newsreader } from "next/font/google";
+import Image from "next/image";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
@@ -60,6 +61,34 @@ export default async function ResearchPage() {
     return (
         <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
             <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
+
+
+                <section className="space-y-7">
+                    <div className="flex items-start">
+                        <Image
+                            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-research.png"
+                            alt="Jaswanth Remiel"
+                            width={180}
+                            height={180}
+                            className="mr-4 "
+                        />
+                    </div>
+                    <div className="space-y-7">
+                        {research.map((item: Research) => (
+                            <ResearchItem
+                                key={item.title}
+                                href={item.href}
+                                title={item.title}
+                                description={item.description}
+                                dates={item.dates}
+                                technologies={item.technologies}
+                            />
+                        ))}
+                    </div>
+                </section>
+            </main>
+
+            <footer className="mt-auto max-w-3xl mx-auto px-10 sm:px-6 pb-20 w-full">
                 <Link
                     href="/"
                     className={`${newsreader.className} text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2`}
@@ -81,25 +110,6 @@ export default async function ResearchPage() {
                     </svg>
                     back to portfolio
                 </Link>
-
-                <section className="space-y-7">
-                    <h2 className="font-medium text-gray-300">research</h2>
-                    <div className="space-y-7">
-                        {research.map((item: Research) => (
-                            <ResearchItem
-                                key={item.title}
-                                href={item.href}
-                                title={item.title}
-                                description={item.description}
-                                dates={item.dates}
-                                technologies={item.technologies}
-                            />
-                        ))}
-                    </div>
-                </section>
-            </main>
-            <footer className="mt-auto max-w-3xl mx-auto px-10 sm:px-6 pb-20 w-full">
-                <ContactSection />
             </footer>
         </div>
     );

@@ -101,7 +101,7 @@ export function GitHubContributions() {
     return (
         <>
             <p className={`${newsreader.className} text-gray-100 mb-4`}>
-                my github be like
+                my github go brrrrrrrrrr
             </p>
             <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#1c1c1c] overflow-hidden">
                 <div
