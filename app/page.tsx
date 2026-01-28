@@ -12,7 +12,7 @@ export default function Page() {
         <Projects />
         <ExperienceDemo />
         <Writing />
-        <ContactSection />
+        <ContactSection /> //
       </main>
     </div>
   );

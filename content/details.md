@@ -42,6 +42,22 @@ projects:
         icon: "Github"
     image: ""
     video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/itsgotime.mp4"
+  
+  - title: "MediaBar vscode extension"
+    href: "https://marketplace.visualstudio.com/items?itemName=jaswanthremiel.mediabar"
+    dates: "April 2023 - May 2023"
+    active: true
+    description: "Control syste-wide media playback from your VS Code status bar. Works with Spotify, browsers, and any Windows media app."
+    technologies:
+      - "VScode"
+      - "TypeScript"
+      - "HTML/CSS"
+    links:
+      - type: "Website"
+        href: "https://marketplace.visualstudio.com/items?itemName=jaswanthremiel.mediabar"
+        icon: "Globe"
+    image: ""
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/mediabar.mp4"
 
   - title: "RoastHub"
     href: "https://github.com/JaswanthRemiel/RoastHub"
@@ -98,6 +114,7 @@ projects:
         icon: "Github"
     image: ""
     video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/batmode.mp4"
+
 
 writings:
   - title: "Stop calling yourself a frontend developer, it’s killing your career"
