@@ -43,9 +43,9 @@ projects:
     image: ""
     video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/itsgotime.mp4"
   
-  - title: "MediaBar vscode extension"
+  - title: "MediaBar"
     href: "https://marketplace.visualstudio.com/items?itemName=jaswanthremiel.mediabar"
-    dates: "April 2023 - May 2023"
+    dates: "Jan 2026 - Present"
     active: true
     description: "Control syste-wide media playback from your VS Code status bar. Works with Spotify, browsers, and any Windows media app."
     technologies:
@@ -57,7 +57,7 @@ projects:
         href: "https://marketplace.visualstudio.com/items?itemName=jaswanthremiel.mediabar"
         icon: "Globe"
     image: ""
-    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/mediabar.mp4"
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/vsmediabar.mp4"
 
   - title: "RoastHub"
     href: "https://github.com/JaswanthRemiel/RoastHub"
