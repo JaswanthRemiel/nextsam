@@ -22,6 +22,27 @@ projects:
     image: ""
     video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/linkdescrip.mp4"
 
+  - title: "NoteOS"
+    href: "https://linkdescrip-ai.remiel.work/"
+    dates: "Sep 2024 - Feb 2025"
+    active: true
+    description: "a Notion-like productivity platform featuring draggable content blocks, inline editing, and persistent document storage powered by Appwrite for authentication, file uploads, and real-time state management. "
+    technologies:
+      - "Next.js"
+      - "Typescript"
+      - "Appwrite"
+      - "OMDB API"
+      - "Shadcn UI"
+    links:
+      - type: "Demo"
+        href: "https://notes.remiel.work/"
+        icon: "Globe"
+      - type: "Source"
+        href: "https://github.com/JaswanthRemiel/NoteOS"
+        icon: "Github"
+    image: ""
+    video: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/videos/noteos.mp4"
+
   - title: "itsGOtime "
     href: "https://github.com/JaswanthRemiel/itsGOtime"
     dates: "November 2025 - Present"
