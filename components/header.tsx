@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Newsreader } from "next/font/google";
 import { GitHubContributions } from "@/components/github-contributions";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+import { Button } from "@/components/ui/3d-button"
 
 export function Header() {
   return (
@@ -23,14 +21,14 @@ export function Header() {
           />
         </div>
 
-        <p className={`${newsreader.className} text-gray-100 text-justify`}>
-          i'm <b className="font-bold">jaswanth remiel</b>, i build things for the web. full-stack
+        <p className="font-sf-regular text-gray-100 text-justify">
+          I'm <b className="text-orange-500">Jaswanth Remiel</b>, i build things for the web. full-stack
           development with a deep focus on ui/ux and design systems. currently
           diving into machine learning and computer vision, figuring out how to
           make interfaces smarter. as a microsoft learn student ambassador, i
           occasionally share what i learn along the way.
         </p>
-        <p className={`${newsreader.className} text-gray-100 text-justify`}>
+        <p className="font-sf-regular text-gray-100 text-justify">
           you can explore my{" "}
           <Link
             href="/research"
@@ -55,13 +53,17 @@ export function Header() {
           .
         </p>
       </header>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <GitHubContributions />
+      </div> */}
+      <br></br>
+      <div className="font-sf-regular">
+        <Button>
+          <Link href="/resume" target="_blank">
+            resume
+          </Link>
+        </Button>
       </div>
-      {/* <p className={`${newsreader.className} text-gray-100 mt-4`}>
-        now listening to
-      </p>
-      <ListeningSection /> */}
     </motion.div>
   );
 }

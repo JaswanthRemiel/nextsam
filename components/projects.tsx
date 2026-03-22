@@ -95,7 +95,7 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <CardTitle className="mt-1 text-base font-medium">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
@@ -147,7 +147,7 @@ export async function Projects() {
 
   return (
     <section className="space-y-7">
-      <h2 className="font-medium text-gray-300">projects</h2>
+      <h2 className="text-lg mb-4 font-medium text-gray-300">projects</h2>
       <div className="space-y-4">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
           {projects.map((project: Project) => (

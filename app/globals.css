@@ -2,6 +2,78 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url("./fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Medium";
+  src: url("./fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Bold";
+  src: url("./fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Black";
+  src: url("./fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Heavy";
+  src: url("./fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Light";
+  src: url("./fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Semibold";
+  src: url("./fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Thin";
+  src: url("./fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Ultralight";
+  src: url("./fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: hsl(240, 10%, 6%);
@@ -13,6 +85,11 @@
     --radius: 0.5rem;
     --shadow-light: rgba(0, 0, 0, 0.2);
     --shadow-dark: rgba(0, 0, 0, 0.4);
+    --color-1: oklch(66.2% 0.225 25.9);
+    --color-2: oklch(60.4% 0.26 302);
+    --color-3: oklch(69.6% 0.165 251);
+    --color-4: oklch(80.2% 0.134 225);
+    --color-5: oklch(90.7% 0.231 133);
   }
 
   .dark {
@@ -24,6 +101,11 @@
     --border: hsl(240, 10%, 16%);
     --shadow-light: rgba(255, 255, 255, 0.05);
     --shadow-dark: rgba(0, 0, 0, 0.3);
+    --color-1: oklch(66.2% 0.225 25.9);
+    --color-2: oklch(60.4% 0.26 302);
+    --color-3: oklch(69.6% 0.165 251);
+    --color-4: oklch(80.2% 0.134 225);
+    --color-5: oklch(90.7% 0.231 133);
   }
 
   body {
@@ -48,6 +130,53 @@
       scrollbar-width: none;
     }
   }
+  .theme {
+    --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  }
+}
+
+@layer utilities {
+  .font-sf-regular {
+    font-family: "SF Pro Display Regular", sans-serif;
+  }
+
+  .font-sf-medium {
+    font-family: "SF Pro Display Medium", sans-serif;
+  }
+
+  .font-sf-bold {
+    font-family: "SF Pro Display Bold", sans-serif;
+  }
+
+  .font-sf-black-italic {
+    font-family: "SF Pro Display Black", sans-serif;
+    font-style: italic;
+  }
+
+  .font-sf-heavy-italic {
+    font-family: "SF Pro Display Heavy", sans-serif;
+    font-style: italic;
+  }
+
+  .font-sf-light-italic {
+    font-family: "SF Pro Display Light", sans-serif;
+    font-style: italic;
+  }
+
+  .font-sf-semibold-italic {
+    font-family: "SF Pro Display Semibold", sans-serif;
+    font-style: italic;
+  }
+
+  .font-sf-thin-italic {
+    font-family: "SF Pro Display Thin", sans-serif;
+    font-style: italic;
+  }
+
+  .font-sf-ultralight-italic {
+    font-family: "SF Pro Display Ultralight", sans-serif;
+    font-style: italic;
+  }
 }
 
 @media (max-width: 768px) {
@@ -67,5 +196,16 @@
   .show-horizontal-scroll::-webkit-scrollbar-thumb {
     background: #f7fafc;
     border-radius: 9999px;
+  }
+}
+
+@theme inline {
+  @keyframes rainbow {
+  0% {
+    background-position: 0%;
+    }
+  100% {
+    background-position: 200%;
+    }
   }
 }

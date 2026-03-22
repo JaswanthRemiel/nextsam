@@ -1,9 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 interface TimelineEntry {
   title: string;
@@ -34,7 +31,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <div className="w-full font-sans relative isolate" ref={containerRef}>
       <div className="mx-auto py-2 px-0">
         <h2 className="text-lg mb-4 text-gray-300 font-medium">experience</h2>
-        <p className={`${newsreader.className} text-gray-100 text-justify`}>
+        <p className="font-sf-regular text-gray-100 text-justify">
           always curious and ready for a challenge, i&apos;ve ventured through
           design, development, and ai, collecting unusual skills along the way.
           my journey connects creative storytelling with hands-on engineering,

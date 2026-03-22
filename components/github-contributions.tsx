@@ -1,9 +1,6 @@
 "use client";
 
 import React, { useEffect, useState, useMemo } from "react";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 interface ContributionDay {
     date: string;
@@ -100,7 +97,7 @@ export function GitHubContributions() {
 
     return (
         <>
-            <p className={`${newsreader.className} text-gray-100 mb-4`}>
+            <p className="font-sf-regular text-gray-100 mb-4">
                 my github go brrrrrrrrrr
             </p>
             <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#1c1c1c] overflow-hidden">

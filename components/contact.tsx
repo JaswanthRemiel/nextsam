@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Newsreader } from "next/font/google";
 import { motion, HTMLMotionProps } from "framer-motion";
 import Image from "next/image";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 type MotionSectionProps = React.ComponentProps<"section"> &
   HTMLMotionProps<"section">;
@@ -32,7 +29,7 @@ export default function ContactSection() {
       <h2 className="font-medium text-gray-300 mb-6">contact</h2>
       <div className="flex flex-col gap-y-1">
         <div
-          className={`${newsreader.className} text-orange-100 flex text-l flex-wrap gap-4 sm:gap-6`}
+          className="font-sf-regular text-orange-100 flex text-l flex-wrap gap-4 sm:gap-6"
         >
           <a
             href="https://twitter.com/jaswanthremiel"
@@ -67,7 +64,7 @@ export default function ContactSection() {
         </div>
         <div className="flex flex-col gap-y-1">
           <a
-            className={`text-l text-muted-foreground ${newsreader.className} text-gray-100`}
+            className="font-sf-regular text-l text-muted-foreground text-gray-100"
           >
             {visitorTime ? (
               <>have a nice {weekdayName(visitorTime)} ahead.</>

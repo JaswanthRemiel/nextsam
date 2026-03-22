@@ -12,7 +12,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        soehne: ["Soehne", "sans-serif"],
+        sans: ["SF Pro Display Regular", "sans-serif"],
+        mono: ["SF Pro Display Medium", "monospace"],
+        soehne: ["SF Pro Display Regular", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

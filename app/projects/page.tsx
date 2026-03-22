@@ -12,9 +12,6 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
 import { Globe, Github } from "lucide-react";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 const Icons = {
   Globe: <Globe className="size-3" />,
@@ -186,7 +183,7 @@ export default async function ProjectsPage() {
       <footer className="mt-auto max-w-3xl mx-auto px-10 sm:px-6 pb-20 w-full">
         <Link
           href="/"
-          className={`${newsreader.className} text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2`}
+          className="font-sf-regular text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2"
         >
           <svg
             width="16"
