@@ -12,11 +12,11 @@ export function Header() {
       <header className="space-y-3">
         <div className="flex items-start mb-6">
           <Image
-            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/catlogo.gif"
+            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/saaa.png"
             alt="Jaswanth Remiel"
             width={55}
             height={55}
-            className="mr-4 rounded-sm"
+            className="mr-4 rounded-lg"
             unoptimized
           />
         </div>
@@ -25,8 +25,9 @@ export function Header() {
           I'm <b className="text-orange-500">Jaswanth Remiel</b>, i build things for the web. full-stack
           development with a deep focus on ui/ux and design systems. currently
           diving into machine learning and computer vision, figuring out how to
-          make interfaces smarter. as a microsoft learn student ambassador, i
-          occasionally share what i learn along the way.
+          make interfaces smarter. i care a lot about performance,
+          accessibility, and the tiny interaction details that make products
+          feel truly polished.
         </p>
         <p className="font-sf-regular text-gray-100 text-justify">
           you can explore my{" "}
@@ -50,17 +51,28 @@ export function Header() {
           >
             youtube
           </Link>
-          .
+          . i'm also a microsoft learn student ambassador and a young jury at
+          awwwards, and i occasionally share what i learn along the way.
         </p>
       </header>
       {/* <div className="mt-4">
         <GitHubContributions />
       </div> */}
       <br></br>
-      <div className="font-sf-regular">
-        <Button>
+      <div className="font-sf-regular justify-start flex gap-2">
+        <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
           <Link href="/resume" target="_blank">
             resume
+          </Link>
+        </Button>
+        <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
+          <Link href="https://scholar.google.com/citations?user=UOhFyHIAAAAJ&hl=en&oi=ao" target="_blank">
+            google scholar
+          </Link>
+        </Button>
+        <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
+          <Link href="https://www.awwwards.com/jury-member/jaswanth-remiel" target="_blank">
+            awwwards
           </Link>
         </Button>
       </div>
