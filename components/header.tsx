@@ -14,9 +14,9 @@ export function Header() {
           <Image
             src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/saaa.png"
             alt="Jaswanth Remiel"
-            width={55}
-            height={55}
-            className="mr-4 rounded-lg"
+            width={82}
+            height={82}
+            className="mr-4 rounded-lg w-[65px] h-[65px] md:w-[82px] md:h-[82px]"
             unoptimized
           />
         </div>
