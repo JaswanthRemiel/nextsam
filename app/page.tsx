@@ -11,7 +11,6 @@ export default function Page() {
         <Header />
         <Projects />
         <ExperienceDemo /> 
-        <Writing />
         <ContactSection /> 
       </main>
     </div>

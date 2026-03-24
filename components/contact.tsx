@@ -29,7 +29,7 @@ export default function ContactSection() {
 
   return (
     <MotionSection>
-      <h2 className="font-medium text-gray-300 mb-6">contact</h2>
+      <h2 className="text-lg mb-4 font-medium text-gray-300">contact</h2>
       <div className="flex flex-col gap-y-1">
         <div
           className="font-sf-regular text-orange-100 flex text-l flex-wrap gap-4 sm:gap-6"

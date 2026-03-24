@@ -67,6 +67,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         width={800}
         height={400}
         className="rounded-lg my-6 w-full"
+        suppressHydrationWarning
       />
     ),
     hr: () => <hr className="border-zinc-700 my-8" />,
