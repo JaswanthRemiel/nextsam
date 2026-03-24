@@ -1,7 +1,14 @@
 import { notFound } from "next/navigation";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { useMDXComponents, Callout } from "@/components/mdx-components";
 import remarkGfm from "remark-gfm";
@@ -61,13 +68,29 @@ export default async function BlogPostPage({
       <main className="flex-grow max-w-4xl mx-auto px-10 sm:px-6 py-20 w-full">
         <article className="space-y-8">
           <div className="space-y-6">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              back to blog
-            </Link>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                      home
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-gray-600" />
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                      blog
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-gray-600" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-white truncate max-w-[200px]">{post.title}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
 
             <header className="space-y-4">
               <h1 className="text-3xl font-sf-medium text-white">{post.title}</h1>
