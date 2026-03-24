@@ -24,11 +24,12 @@ export function ExperienceDemo() {
           </p>
           <div className="grid grid-cols-2 gap-3">
             <Image
-              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/ncompass.png"
+              src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/ncompass.png"
               alt="NCompass work"
               width={500}
               height={500}
               className="h-full w-full rounded-lg object-cover shadow-lg "
+              suppressHydrationWarning
             />
           </div>
           <div className="mt-4">
@@ -40,18 +41,20 @@ export function ExperienceDemo() {
             </p>
             <div className="grid grid-cols-2 gap-3">
               <Image
-                src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/awwwards.png"
+                src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/awwwards.png"
                 alt="Awwwards jury"
                 width={500}
                 height={500}
                 className="h-full w-full rounded-lg object-cover shadow-lg"
+                suppressHydrationWarning
               />
               <Image
-                src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/awwwards2.png"
+                src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/awwwards2.png"
                 alt="Awwwards event"
                 width={500}
                 height={500}
                 className="h-full w-full rounded-lg object-cover shadow-lg"
+                suppressHydrationWarning
               />
             </div>
           </div>
@@ -115,18 +118,20 @@ export function ExperienceDemo() {
           </p>
           <div className="grid grid-cols-2 gap-3">
             <Image
-              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/microsoft1.png"
+              src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/microsoft1.png"
               alt="Microsoft ambassador"
               width={500}
               height={500}
               className="h-full w-full rounded-lg object-cover shadow-lg"
+              suppressHydrationWarning
             />
             <Image
-              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/microsoft2.png"
+              src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/microsoft2.png"
               alt="Microsoft event"
               width={500}
               height={500}
               className="h-full w-full rounded-lg object-cover shadow-lg"
+              suppressHydrationWarning
             />
           </div>
         </div>

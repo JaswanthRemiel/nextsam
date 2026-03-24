@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
-import Image from "next/image";
 
 type MotionSectionProps = React.ComponentProps<"section"> &
   HTMLMotionProps<"section">;
@@ -11,7 +10,11 @@ const MotionSection =
   motion.section as unknown as React.ComponentType<MotionSectionProps>;
 
 export default function ContactSection() {
-  const [visitorTime] = useState<Date | null>(() => new Date());
+  const [visitorTime, setVisitorTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setVisitorTime(new Date());
+  }, []);
 
   const weekdayName = (date: Date | null) => {
     if (!date) return null;

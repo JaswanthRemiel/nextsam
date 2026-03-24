@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="font-sf-regular bg-black text-white antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sf-regular bg-black text-white antialiased" suppressHydrationWarning>
         {children}
         <Analytics />
         <SpeedInsights />

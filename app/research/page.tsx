@@ -63,7 +63,7 @@ export default async function ResearchPage() {
                 <section className="space-y-7">
                     <div className="flex items-start">
                         <Image
-                            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-research.png"
+                            src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/sign-research.png"
                             alt="Jaswanth Remiel"
                             width={180}
                             height={180}

@@ -14,8 +14,8 @@ import { getDetails } from "@/lib/data";
 import { Globe, Github } from "lucide-react";
 
 const Icons = {
-  Globe: <Globe className="size-3" />,
-  Github: <Github className="size-3" />,
+  Globe: <Globe className="size-3" suppressHydrationWarning />,
+  Github: <Github className="size-3" suppressHydrationWarning />,
 };
 
 interface ProjectLink {
@@ -90,6 +90,7 @@ export function ProjectCard({
             width={500}
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"
+            suppressHydrationWarning
           />
         )}
       </Link>
@@ -180,6 +181,7 @@ export async function Projects() {
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              suppressHydrationWarning
             >
               <path
                 d="M4 8H12M12 8L9 5M12 8L9 11"
@@ -187,6 +189,7 @@ export async function Projects() {
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                suppressHydrationWarning
               />
             </svg>
           </Link>

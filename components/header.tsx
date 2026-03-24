@@ -12,11 +12,12 @@ export function Header() {
       <header className="space-y-3">
         <div className="flex items-start mb-6">
           <Image
-            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/saaa.png"
+            src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/saaa.png"
             alt="Jaswanth Remiel"
             width={82}
             height={82}
             className="mr-4 rounded-lg w-[65px] h-[65px] md:w-[82px] md:h-[82px]"
+            suppressHydrationWarning
             unoptimized
           />
         </div>

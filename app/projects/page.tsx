@@ -153,7 +153,7 @@ export default async function ProjectsPage() {
         <section className="space-y-7">
           <div className="flex items-start">
             <Image
-              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-projects.png"
+              src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/sign-projects.png"
               alt="Jaswanth Remiel"
               width={180}
               height={180}
