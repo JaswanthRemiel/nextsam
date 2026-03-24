@@ -37,14 +37,21 @@ export function Header() {
           >
             research
           </Link>
-          {" "}for papers and experiments, or check out{" "}
+          {" "}for papers and experiments, check out{" "}
           <Link
             href="/projects"
             className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"
           >
             projects
           </Link>
-          {" "}for things i've shipped. sometimes i make videos on{" "}
+          {" "}for things i've shipped, or read my{" "}
+          <Link
+            href="/blog"
+            className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"
+          >
+            blog
+          </Link>
+          . sometimes i make videos on{" "}
           <Link
             href="https://www.youtube.com/@remielgraphy"
             className="underline text-gray-100 decoration-gray-100 hover:text-white transition-colors"

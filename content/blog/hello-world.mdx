@@ -1,0 +1,83 @@
+---
+title: "Hello World: My First Blog Post"
+date: "2024-03-24"
+description: "Welcome to my blog! This is a sample post demonstrating all the MDX features available."
+tags: ["introduction", "mdx", "blog"]
+---
+
+Welcome to my blog! This is a sample post to show you all the features available when writing with MDX.
+
+## What is MDX?
+
+MDX is a format that lets you seamlessly write JSX in your Markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content.
+
+### Code Blocks
+
+Here's an example of some code:
+
+```javascript
+const greeting = "Hello, World!";
+console.log(greeting);
+
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+### Inline Code
+
+You can also use `inline code` like this within your paragraphs.
+
+## Typography Features
+
+This blog supports various typography features:
+
+- **Bold text** for emphasis
+- *Italic text* for subtle emphasis
+- ~~Strikethrough~~ for corrections
+- [Links](https://example.com) with proper styling
+
+### Lists
+
+1. First ordered item
+2. Second ordered item
+3. Third ordered item
+
+Unordered lists work too:
+
+- Item one
+- Item two
+- Item three
+
+## Blockquotes
+
+> "The best way to predict the future is to invent it."
+> — Alan Kay
+
+## Tables
+
+| Feature | Status | Notes |
+|---------|--------|-------|
+| MDX Support | ✅ | Full support |
+| Syntax Highlighting | ✅ | Via rehype-highlight |
+| GFM Tables | ✅ | Via remark-gfm |
+
+---
+
+## Getting Started
+
+To add a new blog post, create a new `.mdx` file in the `/content/blog` directory with the following frontmatter:
+
+```yaml
+---
+title: "Your Post Title"
+date: "2024-03-24"
+description: "A brief description of your post"
+tags: ["tag1", "tag2"]
+---
+```
+
+Then write your content using Markdown and MDX!
+
+Happy writing! 🚀
