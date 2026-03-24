@@ -1,6 +1,13 @@
 import { getAllPosts } from "@/lib/blog";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export const metadata = {
   title: "Blog — Remiel",
@@ -23,13 +30,21 @@ export default function BlogPage() {
     <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
       <main className="flex-grow max-w-4xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
         <div className="space-y-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            back home
-          </Link>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                    home
+                  </Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-gray-600" />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-white">blog</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
 
           <header className="space-y-3">
             <h1 className="text-2xl font-sf-medium text-white">blog</h1>

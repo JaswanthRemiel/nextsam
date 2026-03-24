@@ -3,6 +3,14 @@ import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
 import ContactSection from "@/components/contact";
 import Image from "next/image";
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 interface Research {
     title: string;
@@ -60,6 +68,22 @@ export default async function ResearchPage() {
             <main className="flex-grow max-w-3xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
 
 
+                <Breadcrumb>
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                                    home
+                                </Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator className="text-gray-600" />
+                        <BreadcrumbItem>
+                            <BreadcrumbPage className="text-white">research</BreadcrumbPage>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>
+
                 <section className="space-y-7">
                     <div className="flex items-start">
                         <Image
@@ -85,29 +109,7 @@ export default async function ResearchPage() {
                 </section>
             </main>
 
-            <footer className="mt-auto max-w-3xl mx-auto px-10 sm:px-6 pb-20 w-full">
-                <Link
-                    href="/"
-                    className="font-sf-regular text-gray-100 text-lg hover:text-gray-300 transition-colors inline-flex items-center gap-2"
-                >
-                    <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M12 12L4 4M4 4H10M4 4V10"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                    back to portfolio
-                </Link>
-            </footer>
+            
         </div>
     );
 }
