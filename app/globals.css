@@ -135,6 +135,63 @@
   }
 }
 
+/* MDX Prose Styles */
+.prose-custom {
+  @apply text-gray-300 leading-relaxed;
+}
+
+.prose-custom > * + * {
+  margin-top: 1.5em;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3 {
+  margin-top: 2em;
+}
+
+.prose-custom pre {
+  @apply bg-zinc-900 border border-zinc-800 rounded-lg overflow-x-auto;
+}
+
+.prose-custom pre code {
+  @apply text-sm;
+}
+
+/* Syntax Highlighting */
+.prose-custom .hljs {
+  @apply bg-transparent;
+}
+
+.prose-custom .hljs-keyword,
+.prose-custom .hljs-selector-tag {
+  @apply text-orange-400;
+}
+
+.prose-custom .hljs-string,
+.prose-custom .hljs-attr {
+  @apply text-green-400;
+}
+
+.prose-custom .hljs-number,
+.prose-custom .hljs-literal {
+  @apply text-blue-400;
+}
+
+.prose-custom .hljs-comment {
+  @apply text-gray-500;
+}
+
+.prose-custom .hljs-function,
+.prose-custom .hljs-title {
+  @apply text-yellow-400;
+}
+
+.prose-custom .hljs-variable,
+.prose-custom .hljs-params {
+  @apply text-gray-300;
+}
+
 @layer utilities {
   .font-sf-regular {
     font-family: "SF Pro Display Regular", sans-serif;
