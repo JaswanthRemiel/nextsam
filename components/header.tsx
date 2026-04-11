@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GitHubContributions } from "@/components/github-contributions";
 import { Button } from "@/components/ui/3d-button"
+import { SkillsCarousel } from "./skills-carousel";
 
 export function Header() {
   return (
@@ -30,6 +31,7 @@ export function Header() {
           accessibility, and the tiny interaction details that make products
           feel truly polished.
         </p>
+
         <p className="font-sf-regular text-gray-100 text-justify">
           you can explore my{" "}
           <Link
@@ -63,32 +65,32 @@ export function Header() {
           awwwards, and i occasionally share what i learn along the way.
         </p>
       </header>
-      {/* <div className="mt-4">
-        <GitHubContributions />
-      </div> */}
-      <br></br>
-      <div className="font-sf-regular justify-start flex gap-2">
+      <p className="font-sf-regular text-gray-100 text-justify mt-4">made these awesome <Link href="/projects" className="underline text-gray-100 decoration-blue-900 hover:text-white transition-colors">projects</Link> with ~</p>
+      <div className="mt-4">
+        <SkillsCarousel />
+      </div>
+      {/* <div className="font-sf-regular justify-start flex gap-2 mt-6">
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="/resume" target = "_blank">
+          <Link href="/resume" target="_blank">
             resume
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="/blog" target = "_blank">
+          <Link href="/blog" target="_blank">
             blog
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="https://scholar.google.com/citations?user=UOhFyHIAAAAJ&hl=en&oi=ao" target = "_blank">
+          <Link href="https://scholar.google.com/citations?user=UOhFyHIAAAAJ&hl=en&oi=ao" target="_blank">
             google scholar
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal" >
-          <Link href="https://www.awwwards.com/jury-member/jaswanth-remiel" target = "_blank">
+          <Link href="https://www.awwwards.com/jury-member/jaswanth-remiel" target="_blank">
             awwwards
           </Link>
         </Button>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
