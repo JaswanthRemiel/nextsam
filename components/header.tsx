@@ -13,7 +13,7 @@ export function Header() {
       <header className="space-y-3">
         <div className="flex items-start mb-6">
           <Image
-            src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/saaa.png"
+            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remiel.png"
             alt="Jaswanth Remiel"
             width={82}
             height={82}
