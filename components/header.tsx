@@ -12,15 +12,17 @@ export function Header() {
     <motion.div>
       <header className="space-y-3">
         <div className="flex items-start mb-6">
-          <Image
-            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remiel.png"
-            alt="Jaswanth Remiel"
-            width={82}
-            height={82}
-            className="mr-4 rounded-lg w-[65px] h-[65px] md:w-[82px] md:h-[82px]"
-            suppressHydrationWarning
-            unoptimized
-          />
+          <div className="mr-4 rounded-xl w-[85px] h-[85px] md:w-[70px] md:h-[70px] overflow-hidden border border-white/10">
+            <Image
+              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remiel.png"
+              alt="Jaswanth Remiel"
+              width={82}
+              height={82}
+              className="w-full h-full object-cover scale-[1.3] translate-y-3 md:translate-y-2"
+              suppressHydrationWarning
+              unoptimized
+            />
+          </div>
         </div>
 
         <p className="font-sf-regular text-gray-100 text-justify">
