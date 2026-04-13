@@ -18,6 +18,7 @@ interface Research {
     description: string;
     dates: string;
     technologies: string[];
+    links?: string[];
 }
 
 interface ResearchItemProps {
@@ -87,7 +88,7 @@ export default async function ResearchPage() {
                 <section className="space-y-7">
                     <div className="flex items-start">
                         <Image
-                            src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/sign-research.png"
+                            src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-research.png"
                             alt="Jaswanth Remiel"
                             width={180}
                             height={180}
@@ -98,7 +99,7 @@ export default async function ResearchPage() {
                         {research.map((item: Research) => (
                             <ResearchItem
                                 key={item.title}
-                                href={item.href}
+                                href={item.href || item.links?.[0]}
                                 title={item.title}
                                 description={item.description}
                                 dates={item.dates}
@@ -109,7 +110,7 @@ export default async function ResearchPage() {
                 </section>
             </main>
 
-            
+
         </div>
     );
 }

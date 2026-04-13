@@ -5,21 +5,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { GitHubContributions } from "@/components/github-contributions";
 import { Button } from "@/components/ui/3d-button"
+import { SkillsCarousel } from "./skills-carousel";
 
 export function Header() {
   return (
     <motion.div>
       <header className="space-y-3">
         <div className="flex items-start mb-6">
-          <Image
-            src="https://raw.githubusercontent.com/JaswanthRemiel/portfolio-assests/main/images/saaa.png"
-            alt="Jaswanth Remiel"
-            width={82}
-            height={82}
-            className="mr-4 rounded-lg w-[65px] h-[65px] md:w-[82px] md:h-[82px]"
-            suppressHydrationWarning
-            unoptimized
-          />
+          <div className="mr-4 rounded-xl w-[85px] h-[85px] md:w-[70px] md:h-[70px] overflow-hidden border border-white/10">
+            <Image
+              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remiel.png"
+              alt="Jaswanth Remiel"
+              width={82}
+              height={82}
+              className="w-full h-full object-cover scale-[1.3] translate-y-3 md:translate-y-2"
+              suppressHydrationWarning
+              unoptimized
+            />
+          </div>
         </div>
 
         <p className="font-sf-regular text-gray-100 text-justify">
@@ -30,6 +33,7 @@ export function Header() {
           accessibility, and the tiny interaction details that make products
           feel truly polished.
         </p>
+
         <p className="font-sf-regular text-gray-100 text-justify">
           you can explore my{" "}
           <Link
@@ -63,32 +67,32 @@ export function Header() {
           awwwards, and i occasionally share what i learn along the way.
         </p>
       </header>
-      {/* <div className="mt-4">
-        <GitHubContributions />
-      </div> */}
-      <br></br>
-      <div className="font-sf-regular justify-start flex gap-2">
+      <p className="font-sf-regular text-gray-100 text-justify mt-4">made these awesome <Link href="/projects" className="underline text-gray-100 decoration-blue-900 hover:text-white transition-colors">projects</Link> with ~</p>
+      <div className="mt-4">
+        <SkillsCarousel />
+      </div>
+      {/* <div className="font-sf-regular justify-start flex gap-2 mt-6">
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="/resume" target = "_blank">
+          <Link href="/resume" target="_blank">
             resume
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="/blog" target = "_blank">
+          <Link href="/blog" target="_blank">
             blog
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
-          <Link href="https://scholar.google.com/citations?user=UOhFyHIAAAAJ&hl=en&oi=ao" target = "_blank">
+          <Link href="https://scholar.google.com/citations?user=UOhFyHIAAAAJ&hl=en&oi=ao" target="_blank">
             google scholar
           </Link>
         </Button>
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal" >
-          <Link href="https://www.awwwards.com/jury-member/jaswanth-remiel" target = "_blank">
+          <Link href="https://www.awwwards.com/jury-member/jaswanth-remiel" target="_blank">
             awwwards
           </Link>
         </Button>
-      </div>
+      </div> */}
     </motion.div>
   );
 }

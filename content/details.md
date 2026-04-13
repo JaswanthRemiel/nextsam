@@ -174,29 +174,33 @@ songs:
     albumCover: "https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/justin.jpg"
 
 research:
-  - title: "AI Research at Samsung R&D"
+  - title: "Multimodal Deep Learning: Bridging Text and Image Classification with Advanced Architecture"
     href: ""
-    dates: "March 2024"
-    description: "Conducted cutting-edge AI and machine learning research at Samsung Research & Development India, focusing on innovative solutions and model implementations."
+    dates: "2025"
+    description: "Co-authored a Springer Nature book chapter on multimodal machine learning integrating text and image representations for classification tasks. Designed a hybrid architecture combining transformer-based NLP models and CNN-based image models using feature-level fusion. Implemented and evaluated models using multiple performance metrics including accuracy, precision, recall, and F1-score."
     technologies:
       - "Python"
       - "TensorFlow"
+      - "PyTorch"
+      - "CNN"
+      - "Transformers"
+      - "Multimodal Learning"
       - "Machine Learning"
-      - "AI Research"
-    links: []
+    links: ["https://link.springer.com/chapter/10.1007/978-3-031-96871-6_5"]
     image: ""
     video: ""
 
-  - title: "Technology Innovation at IPTIF"
+  - title: "Quantum-AI Enhanced Biosensor for Environmental Toxin Detection"
     href: ""
-    dates: "May 2024"
-    description: "Contributed to technology innovation projects at IIT Palakkad Technology IHub Foundation, collaborating with research teams on emerging technologies."
+    dates: "Ongoing"
+    description: "Conducting research on AI-driven biosensor frameworks for environmental toxin detection using synthetic data generation and hybrid machine learning models. Developing simulation-based training pipelines to address data scarcity and improve model generalization."
     technologies:
-      - "Research"
-      - "Innovation"
-      - "IIT Palakkad"
+      - "Python"
+      - "Machine Learning"
+      - "Synthetic Data"
+      - "AI Research"
+      - "Simulation"
+      - "Hybrid ML"
     links: []
     image: ""
     video: ""
----
-

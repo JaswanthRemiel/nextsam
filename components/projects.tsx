@@ -144,13 +144,13 @@ export function ProjectCard({
 
 export async function Projects() {
   const data = await getDetails();
-  const projects = (data.projects || []).slice(0, 4);
+  const projects = (data.projects || []).slice(0, 6);
 
   return (
     <section className="space-y-7">
-      <h2 className="text-lg mb-4 font-medium text-gray-300">projects</h2>
+      {/* <h2 className="max-w-4xl mx-auto text-lg mb-4 font-medium text-gray-300">projects</h2> */}
       <div className="space-y-4">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project: Project) => (
             <ProjectCard
               key={project.title}

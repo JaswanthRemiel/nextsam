@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full font-sans relative isolate" ref={containerRef}>
-      <div className="mx-auto py-2 px-0">
+      <div className="mx-auto py-2 px-0 max-w-4xl">
         <h2 className="text-lg mb-4 text-gray-300 font-medium">experience</h2>
         <p className="font-sf-regular text-gray-100 text-justify">
           always curious and ready for a challenge, i&apos;ve ventured through
