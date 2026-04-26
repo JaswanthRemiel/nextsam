@@ -14,7 +14,7 @@ export function Header() {
         <div className="flex items-start mb-6">
           <div className="mr-4 rounded-xl w-[85px] h-[85px] md:w-[70px] md:h-[70px] overflow-hidden border border-white/10">
             <Image
-              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remiel.png"
+              src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remieldp.png"
               alt="Jaswanth Remiel"
               width={82}
               height={82}
