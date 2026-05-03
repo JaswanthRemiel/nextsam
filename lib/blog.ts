@@ -10,6 +10,7 @@ export interface BlogPost {
   date: string;
   description: string;
   tags?: string[];
+  featured?: boolean;
   content: string;
 }
 
@@ -19,6 +20,7 @@ export interface BlogPostMeta {
   date: string;
   description: string;
   tags?: string[];
+  featured?: boolean;
 }
 
 export function getAllPosts(): BlogPostMeta[] {
@@ -77,4 +79,46 @@ export function getAllPostSlugs(): string[] {
   return fileNames
     .filter((fileName) => fileName.endsWith(".mdx"))
     .map((fileName) => fileName.replace(/\.mdx$/, ""));
+}
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const tags = new Set<string>();
+
+  posts.forEach((post) => {
+    if (post.tags && post.tags.length > 0) {
+      post.tags.forEach((tag) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags).sort();
+}
+
+export function getTagCounts(): Record<string, number> {
+  const posts = getAllPosts();
+  const counts: Record<string, number> = {};
+
+  posts.forEach((post) => {
+    if (post.tags && post.tags.length > 0) {
+      post.tags.forEach((tag) => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    }
+  });
+
+  return counts;
+}
+
+export function getPostsByTag(tag: string): BlogPostMeta[] {
+  const posts = getAllPosts();
+  if (tag === "all" || !tag) {
+    return posts;
+  }
+
+  return posts.filter((post) => post.tags && post.tags.includes(tag));
+}
+
+export function getFeaturedPosts(): BlogPostMeta[] {
+  const posts = getAllPosts();
+  return posts.filter((post) => post.featured === true);
 }

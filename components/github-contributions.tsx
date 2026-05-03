@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useMemo } from "react";
+import { useTheme } from "next-themes";
 
 interface ContributionDay {
     date: string;
@@ -15,12 +16,20 @@ interface ContributionWeek {
 const CELL_SIZE = 12;
 const GAP_SIZE = 2;
 
-const CONTRIBUTION_COLORS = {
+const DARK_COLORS: Record<number, string> = {
     0: "#1c1c1c",
     1: "#0e4429",
     2: "#006d32",
     3: "#26a641",
     4: "#39d353",
+};
+
+const LIGHT_COLORS: Record<number, string> = {
+    0: "#eee9e3",
+    1: "#a7d9b2",
+    2: "#57c278",
+    3: "#2da44e",
+    4: "#116d32",
 };
 
 function generateContributionData(weeksNeeded: number): ContributionWeek[] {
@@ -74,6 +83,7 @@ function generateContributionData(weeksNeeded: number): ContributionWeek[] {
 export function GitHubContributions() {
     const [mounted, setMounted] = useState(false);
     const [windowWidth, setWindowWidth] = useState(0);
+    const { resolvedTheme } = useTheme();
 
     useEffect(() => {
         setWindowWidth(window.innerWidth);
@@ -90,6 +100,8 @@ export function GitHubContributions() {
     }, [windowWidth]);
 
     const contributionData = useMemo(() => generateContributionData(weeksNeeded), [weeksNeeded]);
+
+    const colors = resolvedTheme === "light" ? LIGHT_COLORS : DARK_COLORS;
 
     if (!mounted) {
         return <div className="w-full h-[84px]" />;
@@ -121,10 +133,7 @@ export function GitHubContributions() {
                                     style={{
                                         width: `${CELL_SIZE}px`,
                                         height: `${CELL_SIZE}px`,
-                                        backgroundColor:
-                                            CONTRIBUTION_COLORS[
-                                            day.level as keyof typeof CONTRIBUTION_COLORS
-                                            ],
+                                        backgroundColor: colors[day.level] || colors[0],
                                     }}
                                 />
                             ))}

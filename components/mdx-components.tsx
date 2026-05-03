@@ -5,16 +5,16 @@ import Image from "next/image";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1 className="text-3xl font-sf-bold text-white mt-8 mb-4">{children}</h1>
+      <h1 className="text-3xl font-sf-bold text-foreground mt-8 mb-4">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-2xl font-sf-medium text-white mt-8 mb-3">{children}</h2>
+      <h2 className="text-2xl font-sf-medium text-foreground mt-8 mb-3">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-xl font-sf-medium text-gray-100 mt-6 mb-2">{children}</h3>
+      <h3 className="text-xl font-sf-medium text-foreground mt-6 mb-2">{children}</h3>
     ),
     p: ({ children }) => (
-      <p className="text-gray-300 leading-relaxed mb-4 font-sf-regular">{children}</p>
+      <p className="text-muted-foreground leading-relaxed mb-4 font-sf-regular">{children}</p>
     ),
     a: ({ href, children }) => (
       <Link
@@ -27,18 +27,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </Link>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-inside space-y-2 mb-4 text-gray-300 ml-4">
+      <ul className="list-disc list-inside space-y-2 mb-4 text-muted-foreground ml-4">
         {children}
       </ul>
     ),
     ol: ({ children }) => (
-      <ol className="list-decimal list-inside space-y-2 mb-4 text-gray-300 ml-4">
+      <ol className="list-decimal list-inside space-y-2 mb-4 text-muted-foreground ml-4">
         {children}
       </ol>
     ),
-    li: ({ children }) => <li className="text-gray-300">{children}</li>,
+    li: ({ children }) => <li className="text-muted-foreground">{children}</li>,
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-orange-500 pl-4 my-4 italic text-gray-400">
+      <blockquote className="border-l-4 border-orange-500 pl-4 my-4 italic text-muted-foreground">
         {children}
       </blockquote>
     ),
@@ -46,7 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       const isInline = !className;
       if (isInline) {
         return (
-          <code className="bg-zinc-800 text-orange-400 px-1.5 py-0.5 rounded text-sm font-mono">
+          <code className="bg-card text-orange-400 px-1.5 py-0.5 rounded text-sm font-mono">
             {children}
           </code>
         );
@@ -56,7 +56,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     pre: ({ children }) => (
-      <pre className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 overflow-x-auto mb-4 text-sm">
+      <pre className="bg-card border border-border rounded-lg p-4 overflow-x-auto mb-4 text-sm">
         {children}
       </pre>
     ),
@@ -70,21 +70,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         suppressHydrationWarning
       />
     ),
-    hr: () => <hr className="border-zinc-700 my-8" />,
+    hr: () => <hr className="border-border my-8" />,
     table: ({ children }) => (
       <div className="overflow-x-auto mb-4">
-        <table className="min-w-full border border-zinc-700 rounded-lg">
+        <table className="min-w-full border border-border rounded-lg">
           {children}
         </table>
       </div>
     ),
     th: ({ children }) => (
-      <th className="border border-zinc-700 px-4 py-2 bg-zinc-800 text-left text-white font-sf-medium">
+      <th className="border border-border px-4 py-2 bg-card text-left text-foreground font-sf-medium">
         {children}
       </th>
     ),
     td: ({ children }) => (
-      <td className="border border-zinc-700 px-4 py-2 text-gray-300">
+      <td className="border border-border px-4 py-2 text-muted-foreground">
         {children}
       </td>
     ),
