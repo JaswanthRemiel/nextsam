@@ -12,9 +12,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { getDetails } from "@/lib/data";
 import { Globe, Github, ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const Icons = {
   Globe: <Globe className="size-3" suppressHydrationWarning />,
@@ -37,6 +35,8 @@ interface Project {
   video?: string;
   links?: ProjectLink[];
 }
+
+
 interface Props {
   title: string;
   href?: string;
@@ -145,21 +145,7 @@ export function ProjectCard({
   );
 }
 
-export function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getDetails().then((data) => {
-      setProjects((data.projects || []).slice(0, 6));
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) {
-    return <div className="text-gray-400">Loading projects...</div>;
-  }
-
+export function Projects({ projects }: { projects: Project[] }) {
   return (
     <section className="space-y-7">
       {/* <h2 className="max-w-4xl mx-auto text-lg mb-4 font-medium text-gray-300">projects</h2> */}
