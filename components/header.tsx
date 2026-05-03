@@ -31,7 +31,8 @@ export function Header() {
         <h1 className="font-sf-regular text-xl sm:text-2xl md:text-4xl text-gray-100 font-normal leading-snug tracking-tight">
           building things for the web.
           <br />
-          design-obsessed, full-stack, dabbling in ml.
+          <span className="hidden sm:inline">design-obsessed, full-stack, dabbling in ml.</span>
+          <span className="sm:hidden">full-stack, design-focused, into ml.</span>
           <br />
           currently at{" "}
           <Link
