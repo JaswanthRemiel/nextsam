@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { Header } from "@/components/header";
 import ContactSection from "@/components/contact";
-import { TabsContent } from "@/components/tabs-content";
+import { TabsSection } from "@/components/tabs-content";
 import { getAllPosts } from "@/lib/blog";
 
 function getDetailsSync() {
@@ -23,9 +23,10 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <Header />
         </div>
-        <TabsContent
+        <TabsSection
           blogPosts={blogPosts}
           research={details.research || []}
+          projects={(details.projects || []).slice(0, 6)}
         />
 
         <div className="max-w-4xl mx-auto">

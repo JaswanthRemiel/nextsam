@@ -80,8 +80,14 @@
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 12%);
     --card-foreground: hsl(0, 0%, 98%);
+    --muted: hsl(240, 6%, 14%);
     --muted-foreground: hsl(240, 5%, 60%);
+    --secondary: hsl(240, 6%, 16%);
+    --secondary-foreground: hsl(0, 0%, 90%);
+    --primary: hsl(24, 90%, 48%);
+    --primary-foreground: hsl(0, 0%, 100%);
     --border: hsl(240, 10%, 16%);
+    --ring: hsl(24, 90%, 48%);
     --radius: 0.5rem;
     --shadow-light: rgba(0, 0, 0, 0.2);
     --shadow-dark: rgba(0, 0, 0, 0.4);
@@ -97,8 +103,14 @@
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 12%);
     --card-foreground: hsl(0, 0%, 98%);
+    --muted: hsl(240, 6%, 14%);
     --muted-foreground: hsl(240, 5%, 60%);
+    --secondary: hsl(240, 6%, 16%);
+    --secondary-foreground: hsl(0, 0%, 90%);
+    --primary: hsl(24, 90%, 48%);
+    --primary-foreground: hsl(0, 0%, 100%);
     --border: hsl(240, 10%, 16%);
+    --ring: hsl(24, 90%, 48%);
     --shadow-light: rgba(255, 255, 255, 0.05);
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --color-1: oklch(66.2% 0.225 25.9);
@@ -324,6 +336,44 @@
   .theme {
     --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
   }
+}
+
+/* ── Tabs component theming ── */
+.tabs-list {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.tabs-trigger {
+  color: var(--muted-foreground);
+}
+
+.tabs-trigger:hover {
+  color: var(--foreground);
+}
+
+.tabs-trigger[data-state="active"] {
+  background-color: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.light .tabs-list {
+  background-color: #e7e5e4;
+}
+
+.light .tabs-trigger {
+  color: #78716c;
+}
+
+.light .tabs-trigger:hover {
+  color: #1c1917;
+}
+
+.light .tabs-trigger[data-state="active"] {
+  background-color: #ffffff;
+  color: #1c1917;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* MDX Prose Styles */
