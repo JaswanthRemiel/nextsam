@@ -6,6 +6,20 @@ import { Projects } from "@/components/projects";
 import { ExperienceDemo } from "@/components/experience";
 import { BlogTabContent } from "@/components/blog-tab-content";
 import { ResearchContent } from "@/components/research";
+import type { BlogPostMeta } from "@/lib/blog";
+
+interface Research {
+  title: string;
+  href?: string;
+  description: string;
+  dates: string;
+  technologies: string[];
+}
+
+interface TabsContentProps {
+  blogPosts: BlogPostMeta[];
+  research: Research[];
+}
 
 const tabs = [
   { id: "projects", label: "projects" },
@@ -14,7 +28,7 @@ const tabs = [
   { id: "research", label: "research" },
 ];
 
-export function TabsContent() {
+export function TabsContent({ blogPosts, research }: TabsContentProps) {
   const [activeTab, setActiveTab] = useState("projects");
 
   const renderContent = () => {
@@ -24,9 +38,9 @@ export function TabsContent() {
       case "experience":
         return <ExperienceDemo />;
       case "blog":
-        return <BlogTabContent />;
+        return <BlogTabContent posts={blogPosts} />;
       case "research":
-        return <ResearchContent />;
+        return <ResearchContent research={research} />;
       default:
         return <Projects />;
     }
