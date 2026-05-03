@@ -399,6 +399,34 @@
   @apply text-sm;
 }
 
+/* Mobile responsiveness for prose content */
+.prose-custom {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.prose-custom img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.prose-custom pre {
+  max-width: 100%;
+}
+
+.prose-custom blockquote {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.prose-custom table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 /* Syntax Highlighting */
 .prose-custom .hljs {
   @apply bg-transparent;

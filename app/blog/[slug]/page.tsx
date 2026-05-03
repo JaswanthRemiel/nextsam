@@ -65,7 +65,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-      <main className="flex-grow max-w-4xl mx-auto px-10 sm:px-6 py-20 w-full">
+      <main className="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-20 w-full">
         <article className="space-y-8">
           <div className="space-y-6">
             <Breadcrumb>
@@ -119,7 +119,7 @@ export default async function BlogPostPage({
 
           <hr className="border-zinc-800" />
 
-          <div className="prose-custom">
+          <div className="prose-custom overflow-hidden min-w-0">
             <MDXRemote
               source={post.content}
               components={mdxComponents}

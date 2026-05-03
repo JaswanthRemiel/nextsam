@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,68 +14,20 @@ import BlogCard from "@/components/blog-card";
 import TagFilter from "@/components/tag-filter";
 import type { BlogPostMeta } from "@/lib/blog";
 
-interface BlogData {
+interface BlogContentProps {
   posts: BlogPostMeta[];
   tags: string[];
   tagCounts: Record<string, number>;
-  filteredPosts: BlogPostMeta[];
 }
 
-export function BlogContent() {
+export function BlogContent({ posts, tags, tagCounts }: BlogContentProps) {
   const searchParams = useSearchParams();
   const selectedTag = searchParams.get("tag") || "all";
 
-  const [data, setData] = useState<BlogData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchBlogData = async () => {
-      try {
-        setIsLoading(true);
-        const response = await fetch(`/api/blog?tag=${selectedTag}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch blog data");
-        }
-        const blogData = await response.json();
-        setData(blogData);
-        setError(null);
-      } catch (err) {
-        console.error("Error fetching blog data:", err);
-        setError("Failed to load blog posts");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchBlogData();
-  }, [selectedTag]);
-
-  if (isLoading) {
-    return (
-      <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-        <main className="flex-grow w-full py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-            <p className="text-center text-gray-400">Loading...</p>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  if (error || !data) {
-    return (
-      <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-        <main className="flex-grow w-full py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-            <p className="text-center text-red-400">{error || "Error loading blog"}</p>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  const { posts, tags, tagCounts, filteredPosts } = data;
+  const filteredPosts =
+    selectedTag === "all"
+      ? posts
+      : posts.filter((post) => post.tags && post.tags.includes(selectedTag));
 
   const calculateGridBorders = (index: number, total: number, cols: number) => {
     const showBottom = true;

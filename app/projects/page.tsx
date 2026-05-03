@@ -181,7 +181,7 @@ export default async function ProjectsPage() {
               alt="Jaswanth Remiel"
               width={180}
               height={180}
-              className="mr-4 "
+              className="mr-4 invert dark:invert-0"
             />
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto">

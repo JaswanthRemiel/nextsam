@@ -56,7 +56,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     pre: ({ children }) => (
-      <pre className="bg-card border border-border rounded-lg p-4 overflow-x-auto mb-4 text-sm">
+      <pre className="bg-card border border-border rounded-lg p-4 overflow-x-auto mb-4 text-sm max-w-full">
         {children}
       </pre>
     ),
@@ -66,7 +66,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         alt={alt || ""}
         width={800}
         height={400}
-        className="rounded-lg my-6 w-full"
+        className="rounded-lg my-6 w-full max-w-full h-auto"
         suppressHydrationWarning
       />
     ),
