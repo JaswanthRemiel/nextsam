@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -11,7 +13,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { getDetails } from "@/lib/data";
-import { Globe, Github } from "lucide-react";
+import { Globe, Github, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Icons = {
   Globe: <Globe className="size-3" suppressHydrationWarning />,
@@ -142,9 +145,20 @@ export function ProjectCard({
   );
 }
 
-export async function Projects() {
-  const data = await getDetails();
-  const projects = (data.projects || []).slice(0, 6);
+export function Projects() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getDetails().then((data) => {
+      setProjects((data.projects || []).slice(0, 6));
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <div className="text-gray-400">Loading projects...</div>;
+  }
 
   return (
     <section className="space-y-7">
@@ -170,28 +184,11 @@ export async function Projects() {
         </div>
 
         <div className="flex justify-end">
-          <Link
-            href="/projects"
-            className="text-xs text-gray-400 inline-flex items-center gap-1 hover:text-gray-300 transition-colors"
-          >
-            more projects
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              suppressHydrationWarning
-            >
-              <path
-                d="M4 8H12M12 8L9 5M12 8L9 11"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                suppressHydrationWarning
-              />
-            </svg>
+          <Link href="/projects">
+            <button className="group px-3 py-1.5 text-xs font-medium text-orange-500 border border-orange-500/30 rounded hover:bg-orange-500/10 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-200 inline-flex items-center gap-2">
+              more projects
+              <ArrowRight className="size-3 group-hover:translate-x-0.5 transition-transform" />
+            </button>
           </Link>
         </div>
       </div>

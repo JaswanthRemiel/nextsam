@@ -108,6 +108,196 @@
     --color-5: oklch(90.7% 0.231 133);
   }
 
+  .light {
+    /* ── Core tokens ── */
+    --background: #faf8f5;
+    --foreground: #1c1917;
+    --muted: #a8a29e;
+    --muted-foreground: #78716c;
+    --border: #e7e5e4;
+    --card: #ffffff;
+    --card-foreground: #1c1917;
+    --shadow-light: rgba(0, 0, 0, 0.04);
+    --shadow-dark: rgba(0, 0, 0, 0.08);
+    --secondary: #f5f5f4;
+    --secondary-foreground: #44403c;
+    --primary: #ea580c;
+    --primary-foreground: #ffffff;
+  }
+
+  /* ── Hardcoded wrapper overrides ── */
+  .light body[class~="bg-black"][class~="text-white"] {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+  }
+
+  .light [class~="min-h-screen"][class~="bg-[#1c1c1c]"][class~="text-white"] {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+  }
+
+  /* ── Text color overrides ── */
+  .light .text-white {
+    color: var(--foreground) !important;
+  }
+
+  .light .text-gray-100 {
+    color: #292524 !important;
+  }
+
+  .light .text-gray-300 {
+    color: #57534e !important;
+  }
+
+  .light .text-gray-400 {
+    color: #78716c !important;
+  }
+
+  .light .text-gray-500 {
+    color: #a8a29e !important;
+  }
+
+  .light .text-gray-600 {
+    color: #a8a29e !important;
+  }
+
+  .light .text-zinc-400 {
+    color: #78716c !important;
+  }
+
+  .light .text-zinc-500 {
+    color: #a8a29e !important;
+  }
+
+  /* ── Background overrides ── */
+  .light .bg-zinc-900 {
+    background-color: #f5f5f4 !important;
+  }
+
+  .light .bg-zinc-800 {
+    background-color: #e7e5e4 !important;
+  }
+
+  .light .bg-gray-800 {
+    background-color: #f5f5f4 !important;
+  }
+
+  .light .bg-gray-700 {
+    background-color: #e7e5e4 !important;
+  }
+
+  .light .bg-black {
+    background-color: var(--background) !important;
+  }
+
+  .light .bg-card {
+    background-color: var(--card) !important;
+  }
+
+  /* ── Border overrides ── */
+  .light .border-zinc-800 {
+    border-color: #e7e5e4 !important;
+  }
+
+  .light .border-zinc-700 {
+    border-color: #d6d3d1 !important;
+  }
+
+  .light .border-gray-700 {
+    border-color: #e7e5e4 !important;
+  }
+
+  .light .border-gray-500 {
+    border-color: #d6d3d1 !important;
+  }
+
+  .light .border-white {
+    border-color: #d6d3d1 !important;
+  }
+
+  /* Profile picture border */
+  .light .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+  }
+
+  /* ── Hover state overrides ── */
+  .light .hover\:text-gray-300:hover {
+    color: #44403c !important;
+  }
+
+  .light .hover\:text-white:hover {
+    color: #1c1917 !important;
+  }
+
+  .light .hover\:bg-gray-700:hover {
+    background-color: #e7e5e4 !important;
+  }
+
+  .light .hover\:bg-gray-800:hover {
+    background-color: #e7e5e4 !important;
+  }
+
+  .light .hover\:bg-zinc-800:hover {
+    background-color: #e7e5e4 !important;
+  }
+
+  .light .hover\:bg-zinc-900\/50:hover {
+    background-color: rgba(245, 245, 244, 0.7) !important;
+  }
+
+  .light .hover\:border-zinc-700:hover {
+    border-color: #d6d3d1 !important;
+  }
+
+  .light .group:hover .group-hover\:text-zinc-300 {
+    color: #44403c !important;
+  }
+
+  .light .group:hover .group-hover\:text-orange-500 {
+    color: #ea580c !important;
+  }
+
+  .light .group:hover .group-hover\:border-zinc-700 {
+    border-color: #d6d3d1 !important;
+  }
+
+  /* ── Blog grid gap line ── */
+  .light .gap-px.bg-zinc-800 {
+    background-color: #e7e5e4 !important;
+  }
+
+  /* ── Prose / MDX overrides ── */
+  .light .prose-custom {
+    color: #57534e !important;
+  }
+
+  .light .prose-custom pre {
+    background-color: #f5f5f4 !important;
+    border-color: #e7e5e4 !important;
+  }
+
+  .light .text-card-foreground {
+    color: var(--card-foreground) !important;
+  }
+
+  /* ── Scrollbar (mobile) ── */
+  .light .show-horizontal-scroll {
+    scrollbar-color: #d6d3d1 transparent;
+  }
+
+  .light .show-horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #d6d3d1;
+  }
+
+  /* ── Light theme: contact section orange links ── */
+  .light section .text-muted-foreground[href] {
+    color: #ea580c !important;
+  }
+
+  .light section .text-muted-foreground[href]:hover {
+    color: #c2410c !important;
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
@@ -257,76 +447,6 @@
   }
 }
 
-/* Skills Carousel */
-.skills-carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-}
-
-.skills-carousel-fade-left,
-.skills-carousel-fade-right {
-  display: none;
-}
-
-.skills-carousel-track {
-  display: flex;
-  gap: 2.5rem;
-  width: max-content;
-  padding: 0.75rem 0;
-}
-
-.skills-carousel-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-shrink: 0;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.skills-carousel-item:hover {
-  opacity: 1;
-}
-
-.skills-carousel-icon {
-  width: 28px;
-  height: 28px;
-  filter: grayscale(100%) brightness(0.7);
-  transition: filter 0.3s ease;
-}
-
-.skills-carousel-item:hover .skills-carousel-icon {
-  filter: grayscale(0%) brightness(1);
-}
-
-.skills-carousel-label {
-  font-family: "SF Pro Display Regular", sans-serif;
-  font-size: 0.95rem;
-  color: #a1a1aa;
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-  transition: color 0.3s ease;
-}
-
-.skills-carousel-item:hover .skills-carousel-label {
-  color: #e4e4e7;
-}
-
 /* Bento Grid Layout */
 .bento-layout {
   display: flex;
@@ -391,6 +511,43 @@
   border-color: #3a3a3a;
 }
 
+/* ── Light theme: bento card borders ── */
+.light .bento-card {
+  border-color: #e7e5e4;
+  background-color: #ffffff;
+}
+
+.light .bento-card:hover {
+  border-color: #d6d3d1;
+}
+
+/* ── Light theme: GitHub contributions background ── */
+.light .bg-\[\#1c1c1c\] {
+  background-color: var(--background) !important;
+}
+
+/* ── Light theme: listening card border ── */
+.light .border-gray-50 {
+  border-color: #e7e5e4 !important;
+}
+
+.light .border-opacity-15 {
+  --tw-border-opacity: 0.2 !important;
+}
+
+/* ── Light theme: project card link badges ── */
+.light .border-opacity-20 {
+  --tw-border-opacity: 0.15 !important;
+}
+
+.light .border-opacity-25 {
+  --tw-border-opacity: 0.2 !important;
+}
+
+.light .border-opacity-30 {
+  --tw-border-opacity: 0.2 !important;
+}
+
 @theme inline {
   @keyframes rainbow {
     0% {
@@ -401,4 +558,9 @@
       background-position: 200%;
     }
   }
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

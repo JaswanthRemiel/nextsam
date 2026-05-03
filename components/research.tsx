@@ -1,0 +1,96 @@
+"use client";
+
+import Link from "next/link";
+import Markdown from "react-markdown";
+import { getDetails } from "@/lib/data";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+interface Research {
+  title: string;
+  href?: string;
+  description: string;
+  dates: string;
+  technologies: string[];
+}
+
+interface ResearchItemProps {
+  href?: string;
+  title: string;
+  description: string;
+  dates: string;
+  technologies: string[];
+}
+
+function ResearchItem({ href, title, description, dates, technologies }: ResearchItemProps) {
+  return (
+    <div>
+      {href ? (
+        <Link
+          href={href}
+          target="_blank"
+          className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
+        >
+          <span className="text-sm underline underline-offset-4">{title}</span>
+        </Link>
+      ) : (
+        <span className="text-sm text-white underline underline-offset-4">{title}</span>
+      )}
+      <div className="text-xs text-gray-500 mt-1">{dates}</div>
+      <div className="text-sm md:text-justify font-mono text-gray-400 mt-1">
+        <Markdown>{description}</Markdown>
+      </div>
+      {technologies && technologies.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-2">
+          {technologies.map((tech) => (
+            <span key={tech} className="text-xs text-gray-500">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function ResearchContent() {
+  const [research, setResearch] = useState<Research[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getDetails().then((data) => {
+      setResearch((data.research as Research[]) || []);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <div className="text-gray-400">Loading research...</div>;
+  }
+
+  return (
+    <section className="space-y-7">
+      {/* <div className="flex items-start">
+        <Image
+          src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/sign-research.png"
+          alt="Research"
+          width={180}
+          height={180}
+          className="mr-4"
+        />
+      </div> */}
+      <div className="space-y-7">
+        {research.map((item: Research) => (
+          <ResearchItem
+            key={item.title}
+            href={item.href}
+            title={item.title}
+            description={item.description}
+            dates={item.dates}
+            technologies={item.technologies}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}

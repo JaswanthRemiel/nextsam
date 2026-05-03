@@ -1,8 +1,6 @@
 import { Header } from "@/components/header";
-import { Projects } from "@/components/projects";
-import Writing from "@/components/writing";
 import ContactSection from "@/components/contact";
-import { ExperienceDemo } from "@/components/experience";
+import { TabsContent } from "@/components/tabs-content";
 
 export default function Page() {
   return (
@@ -11,11 +9,8 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <Header />
         </div>
-        <Projects />
+        <TabsContent />
 
-        <div className="max-w-4xl mx-auto">
-          <ExperienceDemo />
-        </div>
         <div className="max-w-4xl mx-auto">
           <ContactSection />
         </div>

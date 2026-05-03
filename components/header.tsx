@@ -5,14 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { GitHubContributions } from "@/components/github-contributions";
 import { Button } from "@/components/ui/3d-button"
-import { SkillsCarousel } from "./skills-carousel";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 export function Header() {
   return (
     <motion.div>
       <header className="space-y-3">
-        <div className="flex items-start mb-6">
-          <div className="mr-4 rounded-xl w-[85px] h-[85px] md:w-[70px] md:h-[70px] overflow-hidden border border-white/10">
+        <div className="flex items-start justify-between mb-6">
+          <div className="flex items-start">
+            <div className="mr-4 rounded-xl w-[85px] h-[85px] md:w-[70px] md:h-[70px] overflow-hidden border border-white/10">
             <Image
               src="https://cdn.jsdelivr.net/gh/JaswanthRemiel/portfolio-assests@main/images/remieldp.png"
               alt="Jaswanth Remiel"
@@ -22,7 +23,9 @@ export function Header() {
               suppressHydrationWarning
               unoptimized
             />
+            </div>
           </div>
+          <AnimatedThemeToggler />
         </div>
 
         <p className="font-sf-regular text-gray-100 text-justify">
@@ -34,7 +37,7 @@ export function Header() {
           feel truly polished.
         </p>
 
-        <p className="font-sf-regular text-gray-100 text-justify">
+        {/* <p className="font-sf-regular text-gray-100 text-justify">
           you can explore my{" "}
           <Link
             href="/research"
@@ -65,12 +68,8 @@ export function Header() {
           </Link>
           . i'm also a microsoft learn student ambassador and a young jury at
           awwwards, and i occasionally share what i learn along the way.
-        </p>
+        </p> */}
       </header>
-      <p className="font-sf-regular text-gray-100 text-justify mt-4">made these awesome <Link href="/projects" className="underline text-gray-100 decoration-blue-900 hover:text-white transition-colors">projects</Link> with ~</p>
-      <div className="mt-4">
-        <SkillsCarousel />
-      </div>
       {/* <div className="font-sf-regular justify-start flex gap-2 mt-6">
         <Button variant="default" size="xs" className="h-6 px-2 text-xs rounded-md font-sf-regular font-normal">
           <Link href="/resume" target="_blank">
