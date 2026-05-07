@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { BlogPostMeta } from "@/lib/blog";
 
-interface BlogCardProps extends BlogPostMeta {
-  showRightBorder?: boolean;
-  showBottomBorder?: boolean;
-}
+interface BlogCardProps extends BlogPostMeta {}
 
 export default function BlogCard({
   slug,
@@ -12,8 +9,6 @@ export default function BlogCard({
   description,
   date,
   tags,
-  showRightBorder = true,
-  showBottomBorder = true,
 }: BlogCardProps) {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -22,41 +17,25 @@ export default function BlogCard({
   });
 
   return (
-    <Link href={`/blog/${slug}`}>
-      <article className={`group relative p-6 transition-colors hover:bg-zinc-900/50 cursor-pointer ${
-        showBottomBorder ? "border-b border-zinc-800" : ""
-      } ${showRightBorder ? "border-r border-zinc-800" : ""}`}>
-        <div className="space-y-3">
-          {/* Title */}
-          <div className="space-y-1">
-            <h3 className="text-lg font-semibold text-white group-hover:text-orange-500 transition-colors line-clamp-2">
-              {title}
-            </h3>
-            <time className="text-xs text-zinc-500 font-mono">
-              {formattedDate}
-            </time>
-          </div>
+    <div>
+      <Link href={`/blog/${slug}`} className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors">
+        <h3 className="text-sm underline underline-offset-4">{title}</h3>
+      </Link>
+      <div className="text-xs text-gray-500 mt-1">{formattedDate}</div>
+      <p className="text-sm font-mono text-gray-400 mt-1">{description}</p>
 
-          {/* Description */}
-          <p className="text-sm text-zinc-400 line-clamp-2 group-hover:text-zinc-300 transition-colors">
-            {description}
-          </p>
-
-          {/* Tags */}
-          {tags && tags.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 pt-2">
-              {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-2 py-1 bg-zinc-900 text-zinc-400 rounded border border-zinc-800 group-hover:border-zinc-700 transition-colors"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
+      {tags && tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs text-gray-600 dark:text-gray-300 border border-orange-200 dark:border-orange-600 rounded-sm px-3 py-0.5"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
-      </article>
-    </Link>
+      )}
+    </div>
   );
 }

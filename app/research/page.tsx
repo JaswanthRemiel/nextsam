@@ -92,7 +92,7 @@ export default async function ResearchPage() {
                             alt="Jaswanth Remiel"
                             width={180}
                             height={180}
-                            className="mr-4 "
+                            className="mr-4 invert dark:invert-0"
                         />
                     </div>
                     <div className="space-y-7">

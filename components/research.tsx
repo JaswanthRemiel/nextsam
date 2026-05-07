@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Badge } from "@/components/ui/badge";
 
 interface Research {
   title: string;
   href?: string;
+  links?: string[];
   description: string;
   dates: string;
   technologies: string[];
@@ -46,13 +48,16 @@ function ResearchItem({
         </span>
       )}
       <div className="text-xs text-gray-500 mt-1">{dates}</div>
-      <div className="text-sm md:text-justify font-mono text-gray-400 mt-1">
+      <div className="text-sm text-justify font-mono text-gray-400 mt-1">
         <Markdown>{description}</Markdown>
       </div>
       {technologies && technologies.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-2">
           {technologies.map((tech) => (
-            <span key={tech} className="text-xs text-gray-500">
+            <span
+              key={tech}
+              className="text-xs text-gray-300 bg-white/2 border border-gray-800 rounded-sm px-3 py-0.5"
+            >
               {tech}
             </span>
           ))}
@@ -78,7 +83,7 @@ export function ResearchContent({ research }: ResearchContentProps) {
         {research.map((item: Research) => (
           <ResearchItem
             key={item.title}
-            href={item.href}
+            href={item.href || item.links?.[0]}
             title={item.title}
             description={item.description}
             dates={item.dates}

@@ -29,19 +29,11 @@ export function BlogContent({ posts, tags, tagCounts }: BlogContentProps) {
       ? posts
       : posts.filter((post) => post.tags && post.tags.includes(selectedTag));
 
-  const calculateGridBorders = (index: number, total: number, cols: number) => {
-    const showBottom = true;
-    const showRight = (index + 1) % cols !== 0;
-
-    return { showBottom, showRight };
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-      <main className="flex-grow w-full py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <main className="flex-grow w-full max-w-4xl lg:max-w-7xl mx-auto px-10 sm:px-6 lg:px-12 py-20 space-y-12">
           {/* Header Section */}
-          <div className="space-y-6 mb-12 border-b border-zinc-800 pb-8">
+          <div className="space-y-6 mb-12">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -73,7 +65,7 @@ export function BlogContent({ posts, tags, tagCounts }: BlogContentProps) {
             <TagFilter tags={tags} tagCounts={tagCounts} />
           )}
 
-          {/* Blog Posts Grid */}
+          {/* Blog Posts */}
           {filteredPosts.length === 0 ? (
             <div className="text-gray-500 py-12 text-center">
               <p className="text-lg font-medium">no posts found</p>
@@ -92,48 +84,17 @@ export function BlogContent({ posts, tags, tagCounts }: BlogContentProps) {
               )}
             </div>
           ) : (
-            <div className="border border-zinc-800 rounded-lg overflow-hidden">
-              {/* Grid Layout */}
-              <div className="hidden lg:grid lg:grid-cols-3 [&>*]:border-b [&>*]:border-zinc-800">
-                {filteredPosts.map((post, index) => {
-                  const borders = calculateGridBorders(index, filteredPosts.length, 3);
-                  return (
-                    <div
-                      key={post.slug}
-                      className={borders.showRight ? "border-r border-zinc-800" : ""}
-                    >
-                      <BlogCard {...post} showRightBorder={false} showBottomBorder={false} />
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* 2-Column Layout for Tablet */}
-              <div className="hidden md:grid md:grid-cols-2 lg:hidden [&>*]:border-b [&>*]:border-zinc-800">
-                {filteredPosts.map((post, index) => (
-                  <div
-                    key={post.slug}
-                    className={index % 2 === 0 ? "border-r border-zinc-800" : ""}
-                  >
-                    <BlogCard {...post} showRightBorder={false} showBottomBorder={false} />
-                  </div>
-                ))}
-              </div>
-
-              {/* Single Column for Mobile */}
-              <div className="md:hidden [&>*]:border-b [&>*]:border-zinc-800">
-                {filteredPosts.map((post) => (
-                  <BlogCard
-                    key={post.slug}
-                    {...post}
-                    showRightBorder={false}
-                    showBottomBorder={false}
-                  />
-                ))}
-              </div>
-            </div>
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredPosts.map((post) => (
+                <div
+                  key={post.slug}
+                  className="p-4 bg-white/2 border border-gray-800 rounded-lg"
+                >
+                  <BlogCard {...post} />
+                </div>
+              ))}
+            </section>
           )}
-        </div>
       </main>
     </div>
   );
